@@ -26,8 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'factory_girl_rails', '~> 4.0'
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -59,6 +57,8 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome

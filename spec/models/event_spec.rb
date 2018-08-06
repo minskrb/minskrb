@@ -31,8 +31,7 @@ RSpec.describe Event, type: :model do
   end
 
   it 'is not valid when the start time is later than the end time' do
-    event = build(:event)
-    event.end_at = 1.week.ago
+    event = build(:event, end_at: 1.week.ago)
     expect(event).to_not be_valid
   end
 end
