@@ -1,14 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  let(:event) {
-    Event.new(title: 'Minsk.rb best',
-              place_title: 'Eventspace.by',
-              place_cord: 'Oktyabrskaya str. 16a, Minsk',
-              description: 'Fixie tote bag ethnic keytar. Neutra vinyl American...',
-              start_at: Time.now,
-              end_at: Time.now + 1.week)
-  }
+  FactoryGirl.define do
+    factory :event do
+      title Faker::String.random(6..20)
+      place_title Faker::String.random(1..30)
+      place_cord Faker::String.random
+      description Faker::String.random(30..100)
+      start_at Time.now
+      end_at 1.week.from_now
+    end
+  end
 
   %i[title place_title place_cord description start_at end_at].each do |attribute|
     it "is valid when #{attribute} presence" do
@@ -29,7 +31,8 @@ RSpec.describe Event, type: :model do
   end
 
   it 'is not valid when the start time is later than the end time' do
-    event.end_at = Time.now - 1.week
+    event = build(:event)
+    event.end_at = 1.week.ago
     expect(event).to_not be_valid
   end
 end
