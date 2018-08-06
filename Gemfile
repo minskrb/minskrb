@@ -57,7 +57,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 3.0'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_bot_rails', '~> 4.0'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
