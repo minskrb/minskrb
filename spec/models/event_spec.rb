@@ -10,58 +10,22 @@ RSpec.describe Event, type: :model do
               end_at: Time.now + 1.week)
   }
 
-  it 'is valid with valid attributes' do
-    expect(event).to be_valid
+  %i[title place_title place_cord description start_at end_at].each do |attribute|
+    it "is valid when #{attribute} presence" do
+      should validate_presence_of(attribute)
+    end
   end
 
-  it 'is not valid without a title' do
-    event.title = nil
-    expect(event).to_not be_valid
+  it 'is valid when the length of :title is more than 6 and less than 20' do
+    should validate_length_of(:title).is_at_least(6).is_at_most(20)
   end
 
-  it 'is not valid when the length of :title is less than 6' do
-    event.title = 'Minsk'
-    expect(event).to_not be_valid
+  it 'is valid when the length of :title is less than 30' do
+    should validate_length_of(:place_title).is_at_most(30)
   end
 
-  it 'is not valid when the length is more than 20' do
-    event.title = 'We are Minsk.rb(EEE BOY)'
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid without a place_title' do
-    event.place_title = nil
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid when the length of :place_title is more than 30' do
-    event.place_title = 'Eventspce.by it`s in Belarus, Minsk'
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid without a place_cord' do
-    event.place_cord = nil
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid without a description' do
-    event.description = nil
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid when the length of :description is less than 30' do
-    event.description = 'Some text in description'
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid without a start_at' do
-    event.start_at = nil
-    expect(event).to_not be_valid
-  end
-
-  it 'is not valid without a end_at' do
-    event.end_at = nil
-    expect(event).to_not be_valid
+  it 'is valid when the length of :title is more than 30' do
+    should validate_length_of(:description).is_at_least(30)
   end
 
   it 'is not valid when the start time is later than the end time' do
