@@ -14,10 +14,6 @@ RSpec.describe Event, type: :model do
       it { should validate_length_of(:place_title).is_at_most(30) }
     end
 
-    describe '#place_cord' do
-      it { should validate_presence_of(:place_cord) }
-    end
-
     describe '#description' do
       it { should validate_presence_of(:description) }
 
