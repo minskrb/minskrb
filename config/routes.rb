@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   root 'events#index'
 
+  devise_for :admin_users
+
   namespace :admin do
     resources :events
 
