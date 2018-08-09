@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+@import 'base/base.scss';
+@import 'shared/shared.scss';
+@import 'styles/styles.scss'
