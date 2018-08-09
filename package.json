@@ -1,5 +1,13 @@
 {
   "name": "minskrb",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "rails-erb-loader": "^5.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "postcss-loader": "^3.0.0",
+    "webpack-dev-server": "2.11.2"
+  }
 }
