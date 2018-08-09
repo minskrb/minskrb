@@ -28,6 +28,8 @@ class EventDashboard < Administrate::BaseDashboard
     :title,
     :place_title,
     :description,
+    :start_at,
+    :end_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
