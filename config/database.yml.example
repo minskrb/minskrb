@@ -82,4 +82,4 @@ production:
   <<: *default
   database: minskrb_production
   username: minskrb
-  password: <%= ENV['MINSKRB_DATABASE_PASSWORD'] %>
+  password: 'minskrb'
