@@ -50,3 +50,8 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+.idea/*
+.DS_Store
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
