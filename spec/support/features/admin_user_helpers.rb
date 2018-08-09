@@ -1,13 +1,13 @@
 module Features
   module AdminUserHelpers
-    def sign_in
+    def sign_in_to_admin_panel(admin_user)
       visit '/admin'
-      fill_in 'admin_user_email', with: 'test@admin.com'
-      fill_in 'admin_user_password', with: 'minskrbtest'
+      fill_in 'admin_user_email', with: admin_user[:email]
+      fill_in 'admin_user_password', with: admin_user[:password]
       click_button 'Log in'
     end
 
-    def event_form(event)
+    def fill_event_form(event)
       fill_in 'event_title', with: event.title
       fill_in 'event_place_title', with: event.place_title
       fill_in 'event_description', with: event.description
