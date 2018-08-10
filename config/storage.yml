@@ -6,6 +6,14 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+
+amazon:
+  service: S3
+  access_key_id: "AKIAJWD33W5RLW4OTKNA"
+  secret_access_key: "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"
+  region: "eu-central-1"
+  bucket: "minskrb"
+
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
