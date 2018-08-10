@@ -7,6 +7,8 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'shoulda-matchers'
 require 'support/factory_bot'
+require 'capybara/rspec'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -30,13 +32,12 @@ Shoulda::Matchers.configure do |config|
   end
 end
 #
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 # The following line is provided for convenience purposes. It has the downside
 # of increasing the boot-up time by auto-requiring all files in the support
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
