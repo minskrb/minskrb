@@ -1,7 +1,4 @@
 require 'rails_helper'
-require 'spec_helper'
-require 'capybara/rspec'
-
 
 RSpec.describe 'Admin panel:', type: :system do
   include Features::AdminUserHelpers
@@ -21,7 +18,7 @@ RSpec.describe 'Admin panel:', type: :system do
 
   context 'on the events index page' do
     context 'has an ability to go to events new page' do
-      scenario 'go to Events creation page' do
+      it 'go to Events creation page' do
         click_link 'New event'
 
         expect(page).to have_content 'New Events'
@@ -37,7 +34,7 @@ RSpec.describe 'Admin panel:', type: :system do
     context 'when submitting event form with valid params' do
       let(:event_params) { attributes_for(:event) }
 
-      scenario 'sees successful notification' do
+      it 'sees successful notification' do
         fill_event_form(event_params)
 
         expect(page).to have_content 'Event was successfully created.'
@@ -47,7 +44,7 @@ RSpec.describe 'Admin panel:', type: :system do
     context 'when submitting event form with invalid params' do
       let(:event_params) { attributes_for(:event, end_at: 1.week.ago) }
 
-      scenario 'sees not successful notification' do
+      it 'sees not successful notification' do
         fill_event_form(event_params)
 
         expect(page).to have_content 'End at must be after the start date'
