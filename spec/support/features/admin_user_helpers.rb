@@ -2,8 +2,8 @@ module Features
   module AdminUserHelpers
     def sign_in_to_admin_panel(email:, password:)
       visit '/admin'
-      fill_in 'admin_user_email', with: email # admin_user[:email]
-      fill_in 'admin_user_password', with: password # admin_user[:password]
+      fill_in 'admin_user_email', with: email
+      fill_in 'admin_user_password', with: password
       click_button 'Log in'
     end
 

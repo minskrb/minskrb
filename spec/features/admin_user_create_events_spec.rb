@@ -1,18 +1,21 @@
 require 'rails_helper'
+require 'spec_helper'
+require 'capybara/rspec'
+
 
 RSpec.describe 'Admin panel:', type: :system do
   include Features::AdminUserHelpers
-  let(:admin_user) { build_stubbed(:admin_user) }
+  let(:admin_user) { create(:admin_user) }
 
   before :each do
     sign_in_to_admin_panel(email: admin_user.email, password: admin_user.password)
   end
 
   context 'on the admin homepage' do
-    context 'has an ability to go to events index page' do
-      scenario 'sees successful notification' do
-        expect(page).to have_content 'Signed in successfully.'
-      end
+    it 'has an ability to go to events index page' do
+      click_link 'Events'
+
+      expect(page).to have_title 'Events'
     end
   end
 
@@ -27,11 +30,14 @@ RSpec.describe 'Admin panel:', type: :system do
   end
 
   context 'on the events new page' do
+    before do
+      click_link 'New event'
+    end
+
     context 'when submitting event form with valid params' do
       let(:event_params) { attributes_for(:event) }
 
       scenario 'sees successful notification' do
-        click_link 'New event'
         fill_event_form(event_params)
 
         expect(page).to have_content 'Event was successfully created.'
@@ -42,7 +48,6 @@ RSpec.describe 'Admin panel:', type: :system do
       let(:event_params) { attributes_for(:event, end_at: 1.week.ago) }
 
       scenario 'sees not successful notification' do
-        click_link 'New event'
         fill_event_form(event_params)
 
         expect(page).to have_content 'End at must be after the start date'
