@@ -1,6 +1,7 @@
 class CreateEventItems < ActiveRecord::Migration[5.2]
   def change
     create_table :event_items do |t|
+      t.belongs_to :event, index: true
       t.string :title
       t.integer :item_type
       t.text :description
