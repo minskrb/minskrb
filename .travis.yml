@@ -5,7 +5,10 @@ services:
  - postgresql
 before_script:
  - psql -c 'create database minskrb_test;' -U postgres
+ - yarn install
  - RAILS_ENV=test bundle exec rails webpacker:compile
 cache:
-  - bundler
-  - yarn
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true
