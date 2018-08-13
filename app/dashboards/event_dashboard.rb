@@ -8,6 +8,7 @@ class EventDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    items: Field::NestedHasMany.with_options(skip: :event),
     id: Field::Number,
     title: Field::String,
     place_title: Field::String,
@@ -43,6 +44,7 @@ class EventDashboard < Administrate::BaseDashboard
     :end_at,
     :created_at,
     :updated_at,
+    :items,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -54,11 +56,12 @@ class EventDashboard < Administrate::BaseDashboard
     :description,
     :start_at,
     :end_at,
+    :items,
   ].freeze
 
   # Overwrite this method to customize how events are displayed
   # across all pages of the admin dashboard.
-  #
+  # => 
   # def display_resource(event)
   #   "Event ##{event.id}"
   # end
