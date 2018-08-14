@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_172853) do
   end
 
   create_table "event_items", force: :cascade do |t|
+    t.bigint "event_id"
     t.string "title"
     t.integer "item_type"
     t.text "description"
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_172853) do
     t.datetime "end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_items_on_event_id"
   end
 
   create_table "events", force: :cascade do |t|
