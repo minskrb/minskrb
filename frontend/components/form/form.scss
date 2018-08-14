@@ -1,64 +1,57 @@
-main * {
-  transition: 0.5s;
-}
+.contact-form {
+  h1 {
+    color: #fff;
+    font-size: 64px;
+    line-height: 95px;
+    margin-top: 105px;
+    margin-left: 198px;
+  }
 
-main h1 {
-  color: #ffffff;
-  font-size: 64px;
-  line-height: 95px;
-  margin-top: 105px;
-  margin-left: 198px;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 34px;
+    margin-left: 384px;
+    width: 640px;
 
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 34px;
-  margin-left: 384px;
-  width: 640px;
-  transition: 5s;
-}
+    input[type=text],
+    textarea {
+      padding-top: 10px;
+      padding-left: 26px;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      background-color: #242424;
+      border: 2px solid #222;
+      box-sizing: border-box;
+      line-height: 36px;
+      color: #c6f6eb;
+      font-size: 24px;
+      font-family: 'Space Mono', monospace;
+      outline: none;
+      resize: none;
+      transition: 2s;
 
-input[type=text],
-textarea {
-  padding-top: 10px;
-  padding-left: 26px;
-  padding-bottom: 14px;
-  margin-bottom: 20px;
-  background-color: #242424;
-  border: 2px solid #222222;
-  box-sizing: border-box;
-  line-height: 36px;
-  color: #c6f6eb;
-  font-size: 24px;
-  font-family: 'Space Mono', monospace;
-  outline: none;
-  resize: none;
-}
+      &:hover {
+        border-color: #50e3c2;
+      }
+    }
 
-input[type=text]:hover,
-textarea:hover {
-  border-color: #50e3c2;
-}
+    input[type=submit] {
+      height: 60px;
+      padding-top: 0;
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      color: #1d1d1d;
+      background-color: #50e3c2;
+      border: none;
+      transition: 2s;
 
-textarea[name=message] {
-  padding-top: 14px;
-  height: 240px;
-}
-
-input[type=submit] {
-  height: 60px;
-  padding-top: 0;
-  margin-bottom: 20px;
-  font-size: 28px;
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: bold;
-  color: #1D1D1D;
-  background-color: #50e3c2;
-  border: none;
-}
-
-input[type=submit]:hover {
-  opacity: 0.6;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
 }
