@@ -63,6 +63,12 @@ ActiveRecord::Schema.define(version: 2018_08_16_064337) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_items_on_event_id"
+
+  create_table "event_media_partners", force: :cascade do |t|
+    t.string "title"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
