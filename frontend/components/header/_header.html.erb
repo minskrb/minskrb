@@ -1,16 +1,27 @@
-<header class="header">
+<header class="header" id="header">
     <%= image_tag asset_pack_path('components/header/static/logo.svg'), class: "logo" %>
     <ul class="nav">
       <li class="nav-item">
-        <%= link_to "Events", class: "nav-item_link" %>
+        <%= link_to "Events","#", class: "nav-item__link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Friends", class: "nav-item_link" %>
+        <%= link_to "Friends", "#", class: "nav-item__link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "About", class: "nav-item_link" %>
+        <%= link_to "About", "#", class: "nav-item__link" %>
       <li class="nav-item">
-        <%= link_to "Contact Us", class: "nav-item_link" %>
+        <%= link_to "Contact Us", "#", class: "nav-item__link" %>
       </li>
     </ul>
+      <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger", onClick: "myFunction()" %>
+    <script>
+      function myFunction() {
+          var x = document.getElementById("header");
+          if (x.className === "header") {
+              x.className += " responsive";
+          } else {
+              x.className = "header";
+          }
+      }
+    </script>
 </header>

@@ -1,15 +1,16 @@
 header {
+  width: 86.11%;
   height: 85px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
   .logo {
     margin-top: 31px;
-    margin-left: 6.97%;
   }
 
   .nav {
-    margin-right: 6.97%;
+    margin-top: 47px;
     width: 29.31%;
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,99 @@ header {
     .nav-item {
       font-size: 16px;
       line-height: 24px;
+
+      .nav-item__link {
+        color: #fff;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: -20%;
+          width: 0;
+          background-color: #50E3C2;
+          height: 14px;
+          transition: 0.5s;
+          z-index: -1;
+        }
+        &:hover:after {
+          width: 140%;
+          opacity: 0.4;
+        }
+      }
+    }
+
+  }
+
+  .burger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+
+  header {
+    width: 86.98%;
+
+    .nav {
+      width: 54.95%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  header {
+    width: 89.44%;
+    height: 56px;
+
+    .logo {
+      width: 117px;
+      height: 36px;
+      margin-top: 20px;
+    }
+
+    .nav {
+      justify-content: flex-end;
+
+      .nav-item {
+        display: none;
+      }
+    }
+
+    .burger {
+      display: block;
+      margin-top: 26px;
+      width: 24px;
+      height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  header.responsive {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+
+      .nav-item {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .burger {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
