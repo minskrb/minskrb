@@ -1,0 +1,22 @@
+header {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    margin-top: 31px;
+    margin-left: 6.97%;
+  }
+
+  .nav {
+    margin-right: 6.97%;
+    width: 29.31%;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-item {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
