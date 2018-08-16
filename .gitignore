@@ -12,6 +12,9 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
 #Ignore database.yml
 /config/database.yml
 
