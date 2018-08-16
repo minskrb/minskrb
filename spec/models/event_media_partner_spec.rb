@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Event::MediaPartner, type: :model do
+RSpec.describe EventMediaPartner, type: :model do
   describe 'Validations' do
     describe '#title' do
       it { should validate_presence_of(:title) }
