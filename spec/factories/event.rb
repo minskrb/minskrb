@@ -5,5 +5,11 @@ FactoryBot.define do
     description Faker::Lorem.sentence(10)
     start_at Time.now
     end_at 1.week.from_now
+
+    trait :with_items do
+      after(:create) do |event|
+        create(:event_item, event: event)
+      end
+    end
   end
 end

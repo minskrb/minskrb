@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class EventDashboard < Administrate::BaseDashboard
+class EventItemDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,11 +8,12 @@ class EventDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    event_items: Field::NestedHasMany.with_options(skip: :event),
+    event: Field::BelongsTo,
     id: Field::Number,
     title: Field::String,
-    place_title: Field::String,
+    item_type: Field::Enum,
     description: Field::Text,
+    speaker_name: Field::String,
     start_at: Field::DateTime,
     end_at: Field::DateTime,
     created_at: Field::DateTime,
@@ -27,8 +28,9 @@ class EventDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :place_title,
+    :item_type,
     :description,
+    :speaker_name,
     :start_at,
     :end_at,
   ].freeze
@@ -36,33 +38,35 @@ class EventDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :event,
     :id,
     :title,
-    :place_title,
+    :item_type,
     :description,
+    :speaker_name,
     :start_at,
     :end_at,
     :created_at,
     :updated_at,
-    :event_items,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :event,
     :title,
-    :place_title,
+    :item_type,
     :description,
+    :speaker_name,
     :start_at,
     :end_at,
-    :event_items,
   ].freeze
 
-  # Overwrite this method to customize how events are displayed
+  # Overwrite this method to customize how event items are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(event)
-  #   "Event ##{event.id}"
+  # def display_resource(event_item)
+  #   "EventItem ##{event_item.id}"
   # end
 end

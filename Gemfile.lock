@@ -63,6 +63,12 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-enum (0.0.7)
+      administrate
+      rails (>= 4.2, < 6.0)
+    administrate-field-nested_has_many (1.0.0)
+      administrate (> 0.8, < 1)
+      cocoon (~> 1.2, >= 1.2.11)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -102,6 +108,7 @@ GEM
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    cocoon (1.2.11)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
@@ -316,6 +323,8 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-enum
+  administrate-field-nested_has_many
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug

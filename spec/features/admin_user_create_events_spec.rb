@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Admin panel:', type: :system do
+RSpec.describe 'Admin Events:', type: :system do
   include Features::AdminUserHelpers
   let(:admin_user) { create(:admin_user) }
 
@@ -17,11 +17,29 @@ RSpec.describe 'Admin panel:', type: :system do
   end
 
   context 'on the events index page' do
-    context 'has an ability to go to events new page' do
-      it 'go to Events creation page' do
-        click_link 'New event'
+    it 'has an ability to go to events new page' do
+      click_link 'New event'
 
-        expect(page).to have_content 'New Events'
+      expect(page).to have_content 'New Events'
+    end
+
+    context 'when event exists' do
+      let!(:event_with_items) { create(:event, :with_items) }
+
+      before :each do
+        visit '/admin/events'
+      end
+
+      it 'has an ability to go to the event edit page and see Add Event Item button' do
+        click_link 'Edit'
+
+        expect(page).to have_content 'Add Event Item'
+      end
+
+      it 'has an ability to go to the event show page and see items' do
+        click_link event_with_items.title
+
+        expect(page).to have_content event_with_items.event_items.first.title
       end
     end
   end
