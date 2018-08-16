@@ -8,6 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "init";
-import "components/form/form";
 import "components/header/header";
+import "components/friends/friends";
+import "components/form/form";
 import "components/footer/footer";
