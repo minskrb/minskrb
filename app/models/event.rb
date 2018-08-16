@@ -3,6 +3,7 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :event_items, allow_destroy: true
   has_many :event_media_partners, dependent: :destroy
   accepts_nested_attributes_for :event_media_partners, allow_destroy: true
+  has_many :videos, as: :videoable
 
   validates :title, :place_title, :description, :start_at, :end_at, presence: true
   validates :title, length: { in: 6..20 }
