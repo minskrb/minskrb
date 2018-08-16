@@ -13,16 +13,22 @@
         <%= link_to "Contact Us", "#", class: "nav-item__link" %>
       </li>
     </ul>
-      <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger", onClick: "myFunction()" %>
-
-    <script>
-      function myFunction() {
-          var x = document.getElementById("header");
-          if (x.className === "header") {
-              x.className += " responsive";
-          } else {
-              x.className = "header";
-          }
-      }
-    </script>
+      <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger", onClick: "toggleResponsive()" %>
 </header>
+
+<script>
+  function toggleResponsive() {
+      var responsive = document.getElementById("header");
+      if (responsive.className === "header") {
+          responsive.className += " responsive";
+      } else {
+          responsive.className = "header";
+      }
+  }
+</script>
+
+<!-- <script>
+  function toggleResponsive() {
+    $(".header").toggleClass('responsive');
+  }
+</script> -->

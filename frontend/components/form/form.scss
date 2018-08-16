@@ -1,11 +1,13 @@
 .contact-form {
+  margin-bottom: 244px;
 
   h1 {
-  color: #fff;
-  font-size: 64px;
-  line-height: 95px;
-  margin-top: 105px;
-  margin-left: 13.75%;
+    color: #fff;
+    font-size: 4.4444vw;
+    line-height: 6.6vw;
+    margin-top: 105px;
+    margin-left: 13.75%;
+    margin-bottom: 40px;
   }
 
   form {
@@ -59,9 +61,15 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
 
   .contact-form {
+    margin-bottom: 92px;
+
+    h1 {
+      margin-top: 100px;
+      margin-left: 6.25%;
+    }
 
     form {
       margin: auto;
@@ -70,13 +78,35 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 550px) {
 
   .contact-form {
+    margin-bottom: 150px;
+
+    h1 {
+      margin-top: 80px;
+      font-size: 32px;
+      margin-left: none;
+    }
 
     form {
       margin: auto;
       width: 89.33%;
+
+      input[type=text],
+      textarea,
+      input[type=submit] {
+        font-size:18px;
+        line-height: 26px;
+      }
+
+      input[type=text] {
+        padding: 17px 13px 17px 25px;
+      }
+
+      textarea {
+        padding: 21px 13px 7px 20px;
+      }
     }
   }
 }
