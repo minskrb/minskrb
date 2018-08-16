@@ -1,4 +1,4 @@
-class Event::Item < ApplicationRecord
+class EventItem < ApplicationRecord
   belongs_to :event
 
   validates :title, :item_type, :start_at, :end_at, presence: true
