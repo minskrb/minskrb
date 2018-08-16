@@ -9,6 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 2018_08_16_064337) do
 
   # These are extensions that must be enabled in order to support this database
@@ -82,5 +83,14 @@ ActiveRecord::Schema.define(version: 2018_08_16_064337) do
     t.datetime "end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "youtube_link"
+    t.integer "videoable_id"
+    t.string "videoable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["videoable_type", "videoable_id"], name: "index_videos_on_videoable_type_and_videoable_id"
   end
 end
