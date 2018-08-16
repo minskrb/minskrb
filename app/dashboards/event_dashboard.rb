@@ -9,6 +9,7 @@ class EventDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     event_items: Field::NestedHasMany.with_options(skip: :event),
+    event_media_partners: Field::NestedHasMany.with_options(skip: :event),
     id: Field::Number,
     title: Field::String,
     place_title: Field::String,
@@ -45,6 +46,7 @@ class EventDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :event_items,
+    :event_media_partners,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -57,6 +59,7 @@ class EventDashboard < Administrate::BaseDashboard
     :start_at,
     :end_at,
     :event_items,
+    :event_media_partners,
   ].freeze
 
   # Overwrite this method to customize how events are displayed
