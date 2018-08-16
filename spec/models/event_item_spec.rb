@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Event::Item, type: :model do
+RSpec.describe EventItem, type: :model do
   describe 'Validations' do
     describe '#title' do
       it { should validate_presence_of(:title) }
