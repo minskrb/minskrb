@@ -11,7 +11,7 @@ class EventItemDashboard < Administrate::BaseDashboard
     event: Field::BelongsTo,
     id: Field::Number,
     title: Field::String,
-    item_type: Field::String.with_options(searchable: false),
+    item_type: Field::Enum,
     description: Field::Text,
     speaker_name: Field::String,
     start_at: Field::DateTime,
@@ -26,10 +26,13 @@ class EventItemDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :event,
     :id,
     :title,
     :item_type,
+    :description,
+    :speaker_name,
+    :start_at,
+    :end_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
