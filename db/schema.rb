@@ -9,8 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
-ActiveRecord::Schema.define(version: 2018_08_15_110310) do
+ActiveRecord::Schema.define(version: 2018_08_16_064337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +52,19 @@ ActiveRecord::Schema.define(version: 2018_08_15_110310) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "event_items", force: :cascade do |t|
+    t.bigint "event_id"
+    t.string "title"
+    t.integer "item_type"
+    t.text "description"
+    t.string "speaker_name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_items_on_event_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "place_title"
@@ -62,4 +74,5 @@ ActiveRecord::Schema.define(version: 2018_08_15_110310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
