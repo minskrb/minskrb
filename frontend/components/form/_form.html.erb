@@ -1,9 +1,9 @@
 <div class="contact-form">
   <h1>Contact Us_</h1>
   <%= form_tag do %>
-   <%= text_field_tag "name", "", placeholder: "Name", class: "contact-form--input" %>
-   <%= text_field_tag "email", "", placeholder: "Email", class: "contact-form--input" %>
-   <%= text_area_tag "message","", placeholder: "Type your message here *Name", class: "contact-form--input" %>
+   <%= text_field_tag "name", "", placeholder: "Name", class: "contact-form__input" %>
+   <%= text_field_tag "email", "", placeholder: "Email *", class: "contact-form__input" %>
+   <%= text_area_tag "message","", placeholder: "Type your message here *", class: "contact-form__input" %>
    <%= submit_tag "send message", class: "contact-form-submit" %>
   <% end %>
 </div>

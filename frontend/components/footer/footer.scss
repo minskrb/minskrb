@@ -1,0 +1,50 @@
+.footer {
+  width: 94.44%;
+  margin: 0 auto;
+  margin-top: 314px;
+
+  .footer-item {
+    position: relative;
+
+    h1 {
+      color: #fff;
+      font-size: 7.84722vw;
+      line-height: 8.3333vw;
+      text-align: center;
+      position: relative;
+
+      &:after {
+        content: "We are Minsk.rb";
+        color: #50e3c2;
+        font-size: 10vw;
+        line-height: 8.3333vw;
+        position: absolute;
+        bottom: 40%;
+        left: 0%;
+        opacity: 0.1;
+      }
+    }
+
+  }
+  aside {
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    right: -8%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .footer {
+
+    aside {
+      margin-left: 5.33%;
+      transform: none;
+      position: unset;
+    }
+  }
+}
