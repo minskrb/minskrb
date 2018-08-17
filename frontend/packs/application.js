@@ -9,6 +9,7 @@
 
 import "init";
 import "components/header/header";
+import "components/speakers/speakers";
 import "components/media/media";
 import "components/where/where";
 import "components/about/about";
