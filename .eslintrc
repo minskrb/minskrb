@@ -4,7 +4,9 @@
   "plugins": ["prettier"],
 
   "env": {
-    "browser": true
+    "browser": true,
+    "jquery": true,
+    "es6": true
   },
 
   "rules": {

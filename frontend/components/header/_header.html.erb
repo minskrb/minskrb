@@ -1,34 +1,17 @@
 <header class="header" id="header">
-    <%= image_tag asset_pack_path('components/header/static/logo.svg'), class: "logo" %>
-    <ul class="nav">
-      <li class="nav-item">
-        <%= link_to "Events","#", class: "nav-item__link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Friends", "#", class: "nav-item__link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "About", "#", class: "nav-item__link" %>
-      <li class="nav-item">
-        <%= link_to "Contact Us", "#", class: "nav-item__link" %>
-      </li>
-    </ul>
-      <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger", onClick: "toggleResponsive()" %>
+  <%= image_tag asset_pack_path('components/header/static/logo.svg'), class: "logo" %>
+  <ul class="nav">
+    <li class="nav-item">
+      <%= link_to "Events","#", class: "nav-item__link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Friends", "#", class: "nav-item__link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "About", "#", class: "nav-item__link" %>
+    <li class="nav-item">
+      <%= link_to "Contact Us", "#", class: "nav-item__link" %>
+    </li>
+  </ul>
+  <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger" %>
 </header>
-
-<script>
-  function toggleResponsive() {
-      var responsive = document.getElementById("header");
-      if (responsive.className === "header") {
-          responsive.className += " responsive";
-      } else {
-          responsive.className = "header";
-      }
-  }
-</script>
-
-<!-- <script>
-  function toggleResponsive() {
-    $(".header").toggleClass('responsive');
-  }
-</script> -->
