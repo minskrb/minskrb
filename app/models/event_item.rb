@@ -1,5 +1,6 @@
 class EventItem < ApplicationRecord
   belongs_to :event
+  has_one :video, as: :videoable
 
   validates :title, :item_type, :start_at, :end_at, presence: true
   validates :title, length: { in: 10..100 }
