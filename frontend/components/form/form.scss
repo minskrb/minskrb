@@ -17,6 +17,12 @@
     margin-left: 26.67%;
     width: 44.51%;
 
+    textarea {
+      height: 240px;
+      padding: 14px 26px;
+      resize: vertical;
+    }
+
     input[type=text],
     textarea {
       font-family: "Space mono", monospace;
@@ -36,11 +42,6 @@
       }
     }
 
-    textarea {
-      height: 240px;
-      padding: 14px 26px;
-      resize: vertical;
-    }
 
     input[type=submit] {
       height: 60px;
@@ -54,6 +55,7 @@
       background-color: #50e3c2;
       border: none;
       transition: opacity 0.5s;
+
       &:hover {
         opacity: 0.6;
       }
@@ -96,7 +98,7 @@
       input[type=text],
       textarea,
       input[type=submit] {
-        font-size:18px;
+        font-size: 18px;
         line-height: 26px;
       }
 

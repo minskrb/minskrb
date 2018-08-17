@@ -9,6 +9,7 @@
 
 import "init";
 import "components/header/header";
+import "components/where/where";
 import "components/about/about";
 import "components/friends/friends";
 import "components/form/form";

@@ -13,4 +13,36 @@ body {
   ul {
     list-style: none;
   }
+
+  button {
+    margin-top: 48px;
+    padding: 11px 42px 14px 43px;
+    color: #50E3C2;
+    border: 8px solid #50E3C2;
+    font: italic bold 30px/45px "Space Mono", monospace;
+    text-transform: uppercase;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 0;
+      background-color: #50E3C2;
+      transition: 0.75s;
+    }
+
+    &:hover {
+      color: #2c2c2c;
+
+      &:after {
+        height: 100%;
+      }
+    }
+  }
 }
