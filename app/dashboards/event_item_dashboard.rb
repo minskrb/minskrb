@@ -9,6 +9,7 @@ class EventItemDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     event: Field::BelongsTo,
+    video: Field::HasOne,
     id: Field::Number,
     title: Field::String,
     item_type: Field::Enum,
@@ -48,6 +49,7 @@ class EventItemDashboard < Administrate::BaseDashboard
     :end_at,
     :created_at,
     :updated_at,
+    :video,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -61,6 +63,7 @@ class EventItemDashboard < Administrate::BaseDashboard
     :speaker_name,
     :start_at,
     :end_at,
+    :video,
   ].freeze
 
   # Overwrite this method to customize how event items are displayed
