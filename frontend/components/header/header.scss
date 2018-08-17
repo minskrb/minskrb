@@ -20,7 +20,7 @@ header {
       font-size: 16px;
       line-height: 24px;
 
-      .nav-item__link {
+      &__link {
         color: #fff;
         position: relative;
 
@@ -74,7 +74,7 @@ header {
     .nav {
       justify-content: flex-end;
 
-      .nav-item {
+      &-item {
         display: none;
       }
     }
@@ -102,7 +102,7 @@ header {
       align-items: center;
       margin-top: 10px;
 
-      .nav-item {
+      &-item {
         display: block;
         text-align: center;
       }
