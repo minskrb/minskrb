@@ -24,18 +24,19 @@ header {
         color: #fff;
         position: relative;
 
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           bottom: -4px;
           left: -20%;
           width: 0;
-          background-color: #50E3C2;
+          background-color: #50e3c2;
           height: 14px;
           transition: 0.5s;
           z-index: -1;
         }
-        &:hover:after {
+
+        &:hover::after {
           width: 140%;
           opacity: 0.4;
         }
@@ -47,8 +48,8 @@ header {
     display: none;
   }
 }
-@media screen and (max-width: 1200px) {
 
+@media screen and (max-width: 1200px) {
   header {
     width: 86.98%;
 
@@ -59,7 +60,6 @@ header {
 }
 
 @media screen and (max-width: 750px) {
-
   header {
     width: 89.44%;
     height: 56px;
@@ -88,7 +88,6 @@ header {
 }
 
 @media screen and (max-width: 550px) {
-
   header.responsive {
     flex-direction: column;
     justify-content: center;

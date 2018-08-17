@@ -13,7 +13,7 @@
       text-align: center;
       position: relative;
 
-      &:after {
+      &::after {
         content: "We are Minsk.rb";
         color: #50e3c2;
         font-size: 9.8vw;
@@ -38,9 +38,7 @@
 }
 
 @media screen and (max-width: 550px) {
-
   .footer {
-
     aside {
       margin-left: 5.33%;
       transform: none;

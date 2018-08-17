@@ -4,6 +4,7 @@
   background-size: contain;
   background-position: 100px 100px;
   background-repeat: no-repeat;
+
   h1 {
     font-size: 4.4444vw;
     line-height: 6.5972vw;
@@ -11,8 +12,8 @@
   }
 
   &-item {
-      margin-left: 18.06%;
-      margin-top: 38px;
+    margin-left: 18.06%;
+    margin-top: 38px;
 
     p {
       width: 83.89%;
@@ -28,7 +29,6 @@
       justify-content: space-between;
 
       .card {
-
         h3 {
           margin: 0;
           font-size: 4.7222vw;
@@ -51,7 +51,7 @@
       font-size: 1.9444vw;
       line-height: 2.8472vw;
       font-weight: bold;
-      color: #50E3C2;
+      color: #50e3c2;
       transition: 0.5s;
 
       &:hover {
@@ -59,7 +59,7 @@
       }
 
       &:visited {
-        color: #50E3C2;
+        color: #50e3c2;
       }
     }
   }
@@ -67,7 +67,6 @@
 
 @media screen and (max-width: 950px) {
   .about {
-
     h1 {
       margin-left: 6.51%;
     }
@@ -122,7 +121,6 @@
         flex-wrap: wrap;
 
         .card {
-
           h3 {
             font-size: 40px;
             line-height: 59px;
