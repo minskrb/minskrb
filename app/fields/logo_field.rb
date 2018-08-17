@@ -1,7 +1,7 @@
 require "administrate/field/base"
 
 class LogoField < Administrate::Field::Base
-  LOGO_DEFAULT = 'https://www.bigbinary.com/assets/services/ror/rubygem-73b83c79780e7e71d4a159177f2cbdb95b07466141beab0380842122d27f4f93.svg'
+  DEFAULT_LOGO = File.read(Rails.root.join('public/default_logo.txt'))
 
   def logo
     data.attached? ? data : LOGO_DEFAULT
