@@ -17,15 +17,15 @@ body {
   button {
     margin-top: 48px;
     padding: 11px 42px 14px 43px;
-    color: #50E3C2;
-    border: 8px solid #50E3C2;
+    color: #50e3c2;
+    border: 8px solid #50e3c2;
     font: italic bold 30px/45px "Space Mono", monospace;
     text-transform: uppercase;
     background-color: transparent;
     outline: none;
     position: relative;
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -33,14 +33,14 @@ body {
       z-index: -1;
       width: 100%;
       height: 0;
-      background-color: #50E3C2;
+      background-color: #50e3c2;
       transition: 0.75s;
     }
 
     &:hover {
       color: #2c2c2c;
 
-      &:after {
+      &::after {
         height: 100%;
       }
     }
