@@ -12,6 +12,7 @@ class EventMediaPartnerDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     link: Field::String,
+    logo: LogoField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -34,6 +35,7 @@ class EventMediaPartnerDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :link,
+    :logo,
     :created_at,
     :updated_at,
   ].freeze
@@ -45,6 +47,7 @@ class EventMediaPartnerDashboard < Administrate::BaseDashboard
     :event,
     :title,
     :link,
+    :logo,
   ].freeze
 
   # Overwrite this method to customize how event media partners are displayed

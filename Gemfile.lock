@@ -63,6 +63,9 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
+    administrate-field-carrierwave (0.3.2)
+      administrate (< 1.0.0)
+      rails (>= 4.2, < 6)
     administrate-field-enum (0.0.7)
       administrate
       rails (>= 4.2, < 6.0)
@@ -103,6 +106,10 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    carrierwave (1.2.3)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
@@ -323,12 +330,14 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  administrate-field-carrierwave (~> 0.3.2)
   administrate-field-enum
   administrate-field-nested_has_many
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
+  carrierwave (~> 1.0)
   chromedriver-helper
   devise
   factory_bot_rails (~> 4.0)
