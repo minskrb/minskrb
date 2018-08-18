@@ -20,9 +20,9 @@
       line-height: 6.94vw;
       position: relative;
 
-      &:after {
+      &::after {
         content: "Minsk.rb Beer Up!";
-        color: #2C4943;
+        color: #2c4943;
         position: absolute;
         font-size: 8vw;
         bottom: 24%;
