@@ -15,5 +15,11 @@ module Features
       fill_in 'event_end_at', with: event_params[:end_at]
       click_button 'Create Event'
     end
+
+    def fill_event_media_partner_form(media_partner_params)
+      page.all("input[type='text']")[8].set(media_partner_params[:title])
+      page.all("input[type='text']")[9].set(media_partner_params[:link])
+      click_button 'Update Event'
+    end
   end
 end
