@@ -1,4 +1,5 @@
 .speakers {
+  margin-top: 63px;
   margin-bottom: 100px;
 
   h3 {
@@ -41,43 +42,43 @@
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .speakers {
-    margin-bottom: 100px;
 
     h3 {
       margin-left: 10.42%;
     }
 
     &-item {
-      margin-left: 21.35%;
+      margin: 0 auto;
       width: 57.29%;
       flex-wrap: wrap;
-
-      &__card {
-
-      }
     }
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
   .speakers {
-    margin-bottom: 100px;
 
     h3 {
-      margin-left: 10.42%;
+      margin-left: 10.67%;
     }
 
     &-item {
-      margin-left: 21.35%;
-      width: 57.29%;
-      flex-wrap: wrap;
+      margin-top: 37px;
+      margin-left: 10.67%;
+      width: 82.67%;
 
       &__card {
-        & img {
-          width: 150px;
+        width: 150px;
+
+        img {
           height: 150px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 22px;
         }
       }
     }

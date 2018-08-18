@@ -13,15 +13,15 @@
       margin-top: 57px;
       margin-bottom: 30px;
       margin-left: 5.56%;
-      font-size: 2.5vw;
-      line-height: 3.6805vw;
+      font-size: 36px;
+      line-height: 53px;
       position: relative;
 
       &:after {
         content: "Shedule_";
         color: #50e3c2;
-        font-size: 3.1944vw;
-        line-height: 4.7916vw;
+        font-size: 46px;
+        line-height: 69px;
         position: absolute;
         bottom: 0;
         left: -1%;
@@ -31,6 +31,7 @@
 
     &__event {
       display: flex;
+      align-items: baseline;
       margin-left: 5.56%;
       color: #fff;
       margin-top: 18px;
@@ -49,16 +50,82 @@
           line-height: 24px;
           font-family: "Roboto", serif;
         }
+
+        &:last-child {
+          margin-left: 5px;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 19px;
+        }
       }
 
       &:last-child {
         margin-bottom: 30px;
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
 
         p:nth-child(2) {
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .shedule {
+    &-item {
+      width: 96.06%;
+
+      h3 {
+        margin-left: 5.21%;
+      }
+
+      &__event {
+        margin-left: 5.21%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .shedule {
+    &-item {
+      width: 96.06%;
+
+      h3 {
+        margin-top: 42px;
+        margin-left: 8%;
+        font-size: 24px;
+        line-height: 36px;
+
+        &:after {
+        font-size: 30px;
+        line-height: 45px;
+        }
+      }
+
+      &__event {
+        margin-left: 8%;
+        flex-wrap: wrap;
+        p {
+          &:first-child {
+            font-size: 14px;
+            line-height: 18px;
+          }
+
+          &:nth-child(2) {
+            margin-left: 6px;
+            font-size: 15px;
+            line-height: 18px;
+          }
+
+          &:last-child {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+          }
         }
       }
     }

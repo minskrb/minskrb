@@ -13,5 +13,16 @@
       <%= link_to "Contact Us", "#", class: "nav-item__link" %>
     </li>
   </ul>
-  <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger" %>
+  <%= image_tag asset_pack_path('components/header/static/menu.svg'), onClick: "toggleResponsive()", class: "burger" %>
 </header>
+
+<script>
+  function toggleResponsive() {
+      var responsive = document.getElementById("header");
+      if (responsive.className === "header") {
+          responsive.className += " responsive";
+      } else {
+          responsive.className = "header";
+      }
+  }
+</script>
