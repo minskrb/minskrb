@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class EventDashboard < Administrate::BaseDashboard
+class EventMediaPartnerDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,14 +8,11 @@ class EventDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    event_items: Field::NestedHasMany.with_options(skip: :event),
-    event_media_partners: Field::NestedHasMany.with_options(skip: :event),
+    event: Field::BelongsTo,
     id: Field::Number,
     title: Field::String,
-    place_title: Field::String,
-    description: Field::Text,
-    start_at: Field::DateTime,
-    end_at: Field::DateTime,
+    link: Field::String,
+    logo: LogoField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,44 +25,35 @@ class EventDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :place_title,
-    :description,
-    :start_at,
-    :end_at,
+    :link,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :event,
     :id,
     :title,
-    :place_title,
-    :description,
-    :start_at,
-    :end_at,
+    :link,
+    :logo,
     :created_at,
     :updated_at,
-    :event_items,
-    :event_media_partners,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :event,
     :title,
-    :place_title,
-    :description,
-    :start_at,
-    :end_at,
-    :event_items,
-    :event_media_partners,
+    :link,
+    :logo,
   ].freeze
 
-  # Overwrite this method to customize how events are displayed
+  # Overwrite this method to customize how event media partners are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(event)
-  #   "Event ##{event.id}"
+  # def display_resource(event_media_partner)
+  #   "EventMediaPartner ##{event_media_partner.id}"
   # end
 end

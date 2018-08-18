@@ -11,5 +11,11 @@ FactoryBot.define do
         create(:event_item, event: event)
       end
     end
+
+    trait :with_media_partners do
+      after(:create) do |event|
+        create(:event_media_partner, event: event)
+      end
+    end
   end
 end

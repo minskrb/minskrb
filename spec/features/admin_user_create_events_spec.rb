@@ -24,22 +24,55 @@ RSpec.describe 'Admin Events:', type: :system do
     end
 
     context 'when event exists' do
-      let!(:event_with_items) { create(:event, :with_items) }
+      let!(:event_with_items_and_media_partners) { create(:event, :with_items, :with_media_partners) }
 
-      before :each do
-        visit '/admin/events'
+      context 'event items funcional' do
+        before :each do
+          visit '/admin/events'
+        end
+
+        it 'has an ability to go to the event edit page and see Add Event Item button' do
+          click_link 'Edit'
+
+          expect(page).to have_content 'Add Event Item'
+        end
+
+        it 'has an ability to go to the event show page and see items' do
+          click_link event_with_items_and_media_partners.title
+
+          expect(page).to have_content event_with_items_and_media_partners.event_items.first.title
+        end
       end
 
-      it 'has an ability to go to the event edit page and see Add Event Item button' do
-        click_link 'Edit'
+      context 'event media partners functional' do
+        before :each do
+          visit '/admin/events'
+          click_link event_with_items_and_media_partners.title
+          click_link "Edit Event ##{event_with_items_and_media_partners.id}"
+          click_link 'Add Event Media Partner'
+        end
 
-        expect(page).to have_content 'Add Event Item'
-      end
+        context 'when submitting event media partner form with valid params' do
+          let(:event_media_partner_params) { attributes_for(:event_media_partner) }
 
-      it 'has an ability to go to the event show page and see items' do
-        click_link event_with_items.title
+          it 'sees successful notification' do
+            click_link 'Add Event Media Partner'
+            fill_event_media_partner_form(event_media_partner_params)
 
-        expect(page).to have_content event_with_items.event_items.first.title
+            expect(page).to have_content 'Event was successfully updated.'
+          end
+        end
+
+        context 'when submitting event media partner form with invalid params' do
+          let(:event_media_partner_params) { attributes_for(:event_media_partner, title: Faker::Lorem.characters(200)) }
+
+          it 'sees failure notification' do
+            click_link 'Add Event Media Partner'
+            fill_event_media_partner_form(event_media_partner_params)
+
+            expect(page).to have_content 'Event media partners title is too long'
+          end
+        end
       end
     end
   end
@@ -62,7 +95,7 @@ RSpec.describe 'Admin Events:', type: :system do
     context 'when submitting event form with invalid params' do
       let(:event_params) { attributes_for(:event, end_at: 1.week.ago) }
 
-      it 'sees not successful notification' do
+      it 'sees failure notification' do
         fill_event_form(event_params)
 
         expect(page).to have_content 'End at must be after the start date'
