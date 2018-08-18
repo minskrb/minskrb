@@ -1,0 +1,123 @@
+.where {
+  &-item {
+    margin-left: 18.13%;
+    width: 68.06%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    &__info {
+      h3 {
+        font-size: 35px;
+        line-height: 56px;
+      }
+
+      span {
+        display: block;
+
+        &:nth-child(1) {
+          margin-top: 37px;
+          font-size: 25px;
+          line-height: 37px;
+          font-weight: bold;
+        }
+
+        &:nth-child(2) {
+          margin-top: 12px;
+          font-size: 30px;
+          line-height: 45px;
+        }
+
+        &:nth-child(3) {
+          margin-top: 18px;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__map {
+      width: 50%;
+      margin-left: 15%;
+
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .where {
+    &-item {
+      width: 86.98%;
+      margin-left: 10.42%;
+
+      &__info {
+        span {
+          &:nth-child(1),
+          &:nth-child(2) {
+            margin-left: 10%;
+          }
+        }
+      }
+
+      &__map {
+        margin-left: 8.5%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .where {
+    &-item {
+      width: 84%;
+      margin-left: 10.42%;
+      flex-direction: column;
+
+      &__info {
+        h3 {
+          font-size: 24px;
+          line-height: 36px;
+        }
+
+        span {
+          &:nth-child(1) {
+            margin-top: 24px;
+            font-size: 18px;
+            line-height: 26px;
+          }
+
+          &:nth-child(2) {
+            margin-top: 10px;
+            font-size: 24px;
+            line-height: 36px;
+          }
+
+          &:nth-child(3) {
+            margin-top: 10px;
+            font-size: 16px;
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &__map {
+        margin-left: 0;
+        width: 100%;
+
+        iframe {
+          width: 100%;
+          height: 160px;
+        }
+      }
+    }
+  }
+}

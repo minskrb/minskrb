@@ -1,0 +1,86 @@
+.speakers {
+  margin-top: 63px;
+  margin-bottom: 100px;
+
+  h3 {
+    color: #fff;
+    margin: 0;
+    margin-left: 18.13%;
+    font-size: 36px;
+    line-height: 56px;
+  }
+
+  &-item {
+    margin-left: 18.13%;
+    margin-top: 48px;
+    width: 63.89%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__card {
+      width: 200px;
+      transition: 0.75s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
+
+      & > p {
+        margin-top: 20px;
+        color: #fff;
+        width: 100%;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .speakers {
+
+    h3 {
+      margin-left: 10.42%;
+    }
+
+    &-item {
+      margin: 0 auto;
+      width: 57.29%;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .speakers {
+
+    h3 {
+      margin-left: 10.67%;
+    }
+
+    &-item {
+      margin-top: 37px;
+      margin-left: 10.67%;
+      width: 82.67%;
+
+      &__card {
+        width: 150px;
+
+        img {
+          height: 150px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

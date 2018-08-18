@@ -1,0 +1,144 @@
+.about {
+  color: #fff;
+  background-image: url(static/we_are_bg.svg);
+  background-size: contain;
+  background-position: 100px 100px;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-size: 4.4444vw;
+    line-height: 6.5972vw;
+    margin-left: 14.58%;
+  }
+
+  &-item {
+    margin-left: 18.06%;
+    margin-top: 38px;
+
+    p {
+      width: 83.89%;
+      font-size: 1.1805vw;
+      line-height: 2.3611vw;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &__scource {
+      margin-top: 57px;
+      width: 63.89%;
+      display: flex;
+      justify-content: space-between;
+
+      .card {
+        h3 {
+          margin: 0;
+          font-size: 4.7222vw;
+          line-height: 4.7222vw;
+        }
+
+        p {
+          margin-top: 2px;
+          font-size: 2.0833vw;
+          line-height: 1.3838vw;
+          font-family: 'Roboto', sans-serif;
+        }
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      margin-top: 110px;
+      margin-bottom: 131px;
+      font-size: 1.9444vw;
+      line-height: 2.8472vw;
+      font-weight: bold;
+      color: #50e3c2;
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:visited {
+        color: #50e3c2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about {
+    h1 {
+      margin-left: 6.51%;
+    }
+
+    &-item {
+      margin-top: 24px;
+      margin-left: 10.42%;
+      width: 83.07%;
+
+      p {
+        font-size: 17px;
+        line-height: 34px;
+      }
+
+      &__scource {
+        margin-top: 60px;
+        width: 100%;
+
+        .card {
+          width: 50%;
+        }
+      }
+
+      &__link {
+        margin-top: 62px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about {
+    background: none;
+
+    h1 {
+      margin-left: 5.33%;
+      font-size: 30px;
+      left: 48px;
+    }
+
+    &-item {
+      margin-top: 20px;
+      margin-left: 10.67%;
+
+      p {
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      &__scource {
+        margin-top: 22px;
+        flex-wrap: wrap;
+
+        .card {
+          h3 {
+            font-size: 40px;
+            line-height: 59px;
+          }
+
+          p {
+            font-size: 17px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      &__link {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
