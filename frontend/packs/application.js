@@ -9,7 +9,7 @@
 
 import "init";
 import "components/header/header";
-import "components/about_event/about_event";
+import "components/event/event";
 import "components/shedule/shedule";
 import "components/speakers/speakers";
 import "components/media/media";
