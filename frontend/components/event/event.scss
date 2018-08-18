@@ -39,13 +39,13 @@
       margin: 0;
       margin-left: 10px;
       padding: 0;
-      color: #50E3C2;
+      color: #50e3c2;
 
       a {
         transition: opacity 0.5s;
 
         &:visited {
-          color: #50E3C2;
+          color: #50e3c2;
         }
 
         &:hover {
@@ -57,20 +57,20 @@
 }
 
 @media screen and (max-width: 950px) {
- .event {
-   h3 {
-    margin-left: 6.51%;
-   }
+  .event {
+    h3 {
+      margin-left: 6.51%;
+    }
 
-   &-item {
-    width: 83.07%;
-    margin-left: 10.42%;
-   }
+    &-item {
+      width: 83.07%;
+      margin-left: 10.42%;
+    }
 
-   &-share {
-    width: 61.59%;
-   }
- }
+    &-share {
+      width: 61.59%;
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {
