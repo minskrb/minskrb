@@ -4,7 +4,7 @@ class LogoField < Administrate::Field::Base
   DEFAULT_LOGO = File.read(Rails.root.join('public/default_logo.txt'))
 
   def logo
-    data.attached? ? data : LOGO_DEFAULT
+    data.attached? ? data : DEFAULT_LOGO
   end
 
   def thumbnail
