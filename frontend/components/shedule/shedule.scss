@@ -17,7 +17,7 @@
       line-height: 53px;
       position: relative;
 
-      &:after {
+      &::after {
         content: "Shedule_";
         color: #50e3c2;
         font-size: 46px;
@@ -64,7 +64,6 @@
       }
 
       &:nth-child(odd) {
-
         p:nth-child(2) {
           font-weight: bold;
         }
@@ -100,15 +99,16 @@
         font-size: 24px;
         line-height: 36px;
 
-        &:after {
-        font-size: 30px;
-        line-height: 45px;
+        &::after {
+          font-size: 30px;
+          line-height: 45px;
         }
       }
 
       &__event {
         margin-left: 8%;
         flex-wrap: wrap;
+
         p {
           &:first-child {
             font-size: 14px;
