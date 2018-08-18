@@ -8,6 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "init";
+import "components/main/main";
 import "components/header/header";
 import "components/event/event";
 import "components/shedule/shedule";
