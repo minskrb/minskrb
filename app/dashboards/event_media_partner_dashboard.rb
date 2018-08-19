@@ -26,6 +26,7 @@ class EventMediaPartnerDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :link,
+    :logo,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

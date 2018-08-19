@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="355.75" height="280.25" viewBox="0 0 355.75 280.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ce0000;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #7c0000;
+      }
+
+      .cls-3 {
+        fill: #f87274;
+      }
+
+      .cls-4 {
+        fill: #fb191d;
+      }
+
+      .cls-5 {
+        fill: #cc0001;
+      }
+
+      .cls-6 {
+        fill: #900000;
+      }
+    </style>
+  </defs>
+  <g>
+    <path d="M111.649,80.840 L244.900,80.840 L177.086,280.265 L111.649,80.840 Z" class="cls-1"/>
+    <path d="M244.173,79.974 L355.678,79.974 L177.100,279.495 L244.173,79.974 Z" class="cls-2"/>
+    <path d="M112.337,80.744 L0.832,80.744 L177.100,279.495 L112.337,80.744 Z" class="cls-3"/>
+    <path d="M59.290,0.755 L113.190,81.605 L177.100,0.755 L59.290,0.755 Z" class="cls-3"/>
+    <path d="M177.100,0.755 L243.320,81.605 L294.140,0.755 L177.100,0.755 Z" class="cls-4"/>
+    <path d="M243.152,80.743 L294.057,-0.015 L355.740,80.743 L243.152,80.743 Z" class="cls-5"/>
+    <path d="M0.000,80.835 L59.311,0.755 L113.960,80.835 L0.000,80.835 Z" class="cls-4"/>
+    <path d="M112.427,80.840 L177.079,-0.015 L244.102,80.840 L112.427,80.840 Z" class="cls-6"/>
+  </g>
+</svg>
