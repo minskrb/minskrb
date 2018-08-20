@@ -39,14 +39,10 @@
       margin: 0;
       margin-left: 10px;
       padding: 0;
-      color: #50e3c2;
 
       a {
         transition: opacity 0.5s;
-
-        &:visited {
-          color: #50e3c2;
-        }
+        color: #50e3c2;
 
         &:hover {
           opacity: 0.6;

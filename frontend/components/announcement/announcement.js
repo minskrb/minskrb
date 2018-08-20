@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./announcement.scss";
 
 $(document).ready(() => {
   $("#to_event").on("click", function(event) {

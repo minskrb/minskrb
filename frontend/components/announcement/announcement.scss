@@ -1,4 +1,4 @@
-.main {
+.announcement {
   &-item {
     width: 86.74%;
     margin-left: 5.83%;
@@ -28,6 +28,22 @@
         bottom: 24%;
         left: 0;
         z-index: -1;
+      }
+    }
+
+    &__link {
+      color: #50E3C2;
+      font-size: 20px;
+      line-height: 29px;
+      font-weight: bold;
+      margin-left: 3.47%;
+
+      &:visited {
+        color: #50E3C2;
+      }
+
+      &:hover {
+        opacity: 0.6;
       }
     }
   }
