@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :events
     resources :event_items
     resources :event_media_partners
+    resources :videos
 
     root to: "events#index"
   end
