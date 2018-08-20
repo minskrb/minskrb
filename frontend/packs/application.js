@@ -14,10 +14,10 @@ import "components/event/event";
 import "components/shedule/shedule";
 import "components/speakers/speakers";
 import "components/media/media";
-import "components/where/where";
+import "components/place/place";
 import "components/about/about";
 import "components/friends/friends";
-import "components/form/form";
+import "components/contact/contact";
 import "components/footer/footer";
 
 import "components/404/404";

@@ -1,4 +1,4 @@
-.contact-form {
+.contact_us {
   margin-bottom: 244px;
 
   h1 {
@@ -42,7 +42,6 @@
       }
     }
 
-
     input[type=submit] {
       height: 60px;
       margin-top: 10px;
@@ -64,7 +63,7 @@
 }
 
 @media screen and (max-width: 950px) {
-  .contact-form {
+  .contact_us {
     margin-bottom: 92px;
 
     h1 {
@@ -80,7 +79,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .contact-form {
+  .contact_us {
     margin-bottom: 150px;
 
     h1 {

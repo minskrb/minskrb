@@ -19,7 +19,7 @@
         font-size: 15px;
         line-height: 15px;
         margin-right: 15px;
-        color: #50E3C2;
+        color: #50e3c2;
 
         &:hover {
           opacity: 0.6;
@@ -67,14 +67,14 @@
     }
 
     &__link {
-      color: #50E3C2;
+      color: #50e3c2;
       font-size: 20px;
       line-height: 29px;
       font-weight: bold;
       margin-left: 3.47%;
 
       &:visited {
-        color: #50E3C2;
+        color: #50e3c2;
       }
 
       &:hover {
@@ -87,10 +87,8 @@
 @media screen and (max-width: 950px) {
   .announcement {
     &-item {
-
       &__shared {
         top: 120px;
-
       }
 
       &__time {
@@ -119,7 +117,6 @@
 @media screen and (max-width: 550px) {
   .announcement {
     &-item {
-
       &__shared {
         display: none;
       }
