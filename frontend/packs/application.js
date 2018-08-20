@@ -19,3 +19,5 @@ import "components/about/about";
 import "components/friends/friends";
 import "components/form/form";
 import "components/footer/footer";
+
+import "components/404/404";
