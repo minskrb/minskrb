@@ -14,7 +14,7 @@
       position: relative;
 
       &:after {
-        content: '404';
+        content: attr(alt);
         font-size: 184px;
         line-height: 272px;
         position: absolute;
