@@ -24,6 +24,7 @@ body {
     background-color: transparent;
     outline: none;
     position: relative;
+    cursor: pointer;
 
     &::after {
       content: '';

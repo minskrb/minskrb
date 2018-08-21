@@ -8,14 +8,19 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "init";
-import "components/main/main";
+import "components/announcement/announcement";
 import "components/header/header";
 import "components/event/event";
 import "components/shedule/shedule";
 import "components/speakers/speakers";
 import "components/media/media";
-import "components/where/where";
+import "components/place/place";
 import "components/about/about";
 import "components/friends/friends";
-import "components/form/form";
+import "components/contact/contact";
 import "components/footer/footer";
+
+import "components/404/404";
+import "components/422/422";
+import "components/500/500";
+import "components/follow/follow";
