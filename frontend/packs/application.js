@@ -21,3 +21,4 @@ import "components/contact/contact";
 import "components/footer/footer";
 
 import "components/404/404";
+import "components/follow/follow";
