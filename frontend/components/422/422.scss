@@ -13,14 +13,14 @@
       line-height: 213px;
       position: relative;
 
-      &:after {
+      &::after {
         content: attr(alt);
         font-size: 184px;
         line-height: 272px;
         position: absolute;
         bottom: 2px;
         left: -48px;
-        color: #2C4943;
+        color: #2c4943;
         z-index: -1;
       }
     }
@@ -71,7 +71,7 @@
         line-height: 184px;
         margin-left: 14.32%;
 
-        &:after {
+        &::after {
           font-size: 154px;
           line-height: 228px;
           left: -52px;
@@ -112,7 +112,7 @@
         line-height: 148px;
         margin-left: unset;
 
-        &:after {
+        &::after {
           font-size: 124px;
           line-height: 184px;
           left: -15px;
