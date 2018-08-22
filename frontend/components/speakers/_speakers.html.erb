@@ -1,21 +1,13 @@
 <section class="speakers">
   <h3>Speakers_</h3>
   <div class="speakers-item">
-      <div class="speakers-item__card">
-        <%= image_tag asset_pack_path('components/speakers/static/man.png') %>
-        <p>Sergey Sergyenko</p>
-      </div>
-      <div class="speakers-item__card">
-        <%= image_tag asset_pack_path('components/speakers/static/man2.png') %>
-        <p>Alexandra Smirnova</p>
-      </div>
-      <div class="speakers-item__card">
-        <%= image_tag asset_pack_path('components/speakers/static/man3.png') %>
-        <p>Kirill Suhodolov</p>
-      </div>
-      <div class="speakers-item__card">
-        <%= image_tag asset_pack_path('components/speakers/static/man4.png') %>
-        <p>Aliaksandr Lomau</p>
-      </div>
+    <% @event.event_items.each do |item| %>
+      <% unless item.speaker_name.blank? %>
+        <div class="speakers-item__card">
+          <%= image_tag asset_pack_path('components/speakers/static/man.png') %>
+          <p><%= item.speaker_name %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </section>
