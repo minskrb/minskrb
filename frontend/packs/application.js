@@ -16,8 +16,8 @@ import "components/speakers/speakers";
 import "components/media/media";
 import "components/place/place";
 import "components/about/about";
-import "components/friends/friends";
 import "components/contact/contact";
+import "components/friends/friends";
 
 // errors
 import "components/404/404";
@@ -33,3 +33,4 @@ import "components/footer/footer";
 import "components/show-photos/show-photos";
 import "components/show-speakers/show-speakers";
 import "components/show-videos/show-videos";
+import "components/show-about/show-about";
