@@ -2,14 +2,13 @@
   <div class="where-item">
     <div class="where-item__info">
       <h3>When & Where_</h>
-      <span>26 Oct 19:00</span>
-      <span>EventSpace.by</span>
+      <span><%= @event.start_at.strftime("%d %b  %H-%M") %></span>
+      <span><%= @event.place_title %></span>
       <span>Oktyabrskaya str. 16a, Minsk</span>
       <button class="btn">register</button>
     </div>
     <div class="where-item__map">
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc4bU611NyBZ_2PJxohPbLTpQWk7UUiaw&q=EventSpace">
-        </iframe>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc4bU611NyBZ_2PJxohPbLTpQWk7UUiaw&q=EventSpace"></iframe>
     </div>
   </div>
 </section>
