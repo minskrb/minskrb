@@ -1,30 +1,12 @@
 <section class="shedule">
   <div class="shedule-item">
   <h3>Shedule_</h3>
+    <% @event.event_items.each do |item| %>
       <div class="shedule-item__event">
-        <p>11.00</p>
-        <p>Registration and Welcome Coffee</p>
-        <p></p>
+        <p><%= item.start_at.strftime("%H:%M") %></p>
+        <p><%= item.title %></p>
+        <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>
       </div>
-      <div class="shedule-item__event">
-        <p>11.30</p>
-        <p>Anfi-IF Missing Pattern</p>
-        <p>— Sergey Sergyenko</p>
-      </div>
-      <div class="shedule-item__event">
-        <p>12.00</p>
-        <p>Coffe break</p>
-        <p></p>
-      </div>
-      <div class="shedule-item__event">
-        <p>12.30</p>
-        <p>Vim or not to Vim</p>
-        <p>— Anatoli</p>
-      </div>
-      <div class="shedule-item__event">
-        <p>13.30</p>
-        <p>Anfi-IF Missing Pattern</p>
-        <p>— Sergey Sergyenko</p>
-      </div>
+    <% end %>
   </div>
 </section>
