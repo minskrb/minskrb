@@ -7,9 +7,9 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+// main page
 import "init";
 import "components/announcement/announcement";
-import "components/header/header";
 import "components/event/event";
 import "components/schedule/schedule";
 import "components/speakers/speakers";
@@ -18,9 +18,18 @@ import "components/place/place";
 import "components/about/about";
 import "components/friends/friends";
 import "components/contact/contact";
-import "components/footer/footer";
 
+// errors
 import "components/404/404";
 import "components/422/422";
 import "components/500/500";
+
+// shared items
+import "components/header/header";
 import "components/follow/follow";
+import "components/footer/footer";
+
+// show-event
+import "components/show-photos/show-photos";
+import "components/show-speakers/show-speakers";
+import "components/show-videos/show-videos";
