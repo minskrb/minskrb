@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'shoulda-matchers'
 require 'support/factory_bot'
 require 'capybara/rspec'
+require "capybara/poltergeist"
 
 # Add additional requires below this line. Rails is not loaded until this point!
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -17,6 +18,8 @@ require 'capybara/rspec'
 # run twice. It is recommended that you do not name files matching this glob to
 # end with _spec.rb. You can configure this pattern with the --pattern
 # option on the command line or in ~/.rspec, .rspec or `.rspec-local`.
+
+Capybara.javascript_driver = :poltergeist
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

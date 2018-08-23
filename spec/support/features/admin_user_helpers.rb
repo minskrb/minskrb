@@ -16,21 +16,27 @@ module Features
       click_button 'Create Event'
     end
 
-    def fill_event_item_form(item_params, event_id)
-      select event_id, from: 'Event'
-      fill_in 'event_item_title', with: item_params[:title]
-      fill_in 'event_item_description', with: item_params[:description]
-      fill_in 'event_item_speaker_name', with: item_params[:speaker_name]
-      fill_in 'event_item_start_at', with: item_params[:start_at]
-      fill_in 'event_item_end_at', with: item_params[:end_at]
-      click_button 'Create Event item'
+    def fill_event_item_form(item_params)
+      click_link 'Add Event Item'
+      all('input')[6].set(item_params[:title])
+      all('input')[7].set(item_params[:speaker_name])
+      all('input')[8].set(item_params[:start_at])
+      all('input')[9].set(item_params[:end_at])
+      click_button 'Update Event'
     end
 
-    def fill_event_media_partner_form(media_partner_params, event_id)
-      select event_id, from: 'Event'
-      fill_in 'event_media_partner_title', with: media_partner_params[:title]
-      fill_in 'event_media_partner_link', with: media_partner_params[:link]
-      click_button 'Create Event media partner'
+    def fill_event_media_partner_form(media_partner_params)
+      click_link 'Add Event Media Partner'
+      all('input')[6].set(media_partner_params[:title])
+      all('input')[7].set(media_partner_params[:link])
+      click_button 'Update Event'
+    end
+
+    def visit_event_item_edit_page(title)
+      visit '/admin/events'
+      within(:xpath, ".//tr[td[contains(text(), #{title})]]") do
+        click_link 'Edit'
+      end
     end
   end
 end

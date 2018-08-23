@@ -75,7 +75,8 @@ group :test do
   gem 'factory_bot_rails', '~> 4.0'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '2.53.4'
+  gem 'poltergeist'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
