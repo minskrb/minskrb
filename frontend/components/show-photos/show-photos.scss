@@ -22,14 +22,14 @@
           a {
             position: relative;
 
-            &:after {
+            &::after {
               position: absolute;
               content: '';
               width: 120%;
               height: 4px;
               top: 18px;
               left: -10%;
-              background-color: #50E3C2;
+              background-color: #50e3c2;
             }
           }
         }
@@ -98,7 +98,7 @@
 
           &:first-child {
             a {
-              &:after {
+              &::after {
                 top: 10px;
               }
             }

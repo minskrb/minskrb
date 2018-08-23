@@ -7,6 +7,7 @@
     &__nav {
       margin: 0;
       padding: 0;
+
       li {
         text-transform: uppercase;
         font-weight: bold;
@@ -28,7 +29,7 @@
               height: 4px;
               top: 18px;
               left: -10%;
-              background-color: #50E3C2;
+              background-color: #50e3c2;
             }
           }
         }
@@ -37,6 +38,7 @@
 
     &__speakers {
       margin-left: 6.74%;
+
       .card {
         display: flex;
         margin-bottom: 40px;
@@ -131,7 +133,7 @@
 
           &:first-child {
             a {
-              &:after {
+              &::after {
                 top: 10px;
               }
             }
