@@ -1,0 +1,169 @@
+.show-speakers {
+  &-content {
+    margin-top: 80px;
+    margin-left: 7.29%;
+    display: flex;
+
+    &__nav {
+      margin: 0;
+      padding: 0;
+      li {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 60px;
+
+        &:first-child {
+          a {
+            position: relative;
+
+            &:after {
+              position: absolute;
+              content: '';
+              width: 120%;
+              height: 4px;
+              top: 18px;
+              left: -10%;
+              background-color: #50E3C2;
+            }
+          }
+        }
+
+        a {
+          color: #fff
+        }
+      }
+    }
+
+    &__speakers {
+      margin-left: 6.74%;
+      .card {
+        display: flex;
+        margin-bottom: 40px;
+
+        &__photo {
+          width: 140px;
+          height: 140px;
+        }
+
+        &-description {
+          color: #fff;
+          margin-left: 42px;
+
+          &__name {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 26px;
+          }
+
+          &__topic {
+            margin: 0;
+            margin-top: 9px;
+            font-size: 22px;
+            line-height: 33px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .show-speakers {
+    &-content {
+      margin-top: 50px;
+      margin-left: 7.16%;
+      display: flex;
+      flex-direction: column;
+
+      &__nav {
+        width: 52.6%;
+        display: flex;
+        justify-content: space-between;
+
+
+        li {
+          font-size: 22px;
+          line-height: 33px;
+        }
+      }
+
+      &__speakers {
+        margin-left: 0;
+        margin-top: 60px;
+
+        .card {
+          display: flex;
+          margin-bottom: 30px;
+
+          &__photo {
+            width: 140px;
+            height: 140px;
+          }
+
+          &-description {
+            margin-left: 22px;
+
+            &__topic {
+              width: 90%;
+              font-size: 20px;
+              line-height: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .show-speakers {
+    &-content {
+      margin: 0 auto;
+      margin-top: 40px;
+
+      &__nav {
+        width: 89.07%;
+        margin: 0 auto;
+
+        li {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      &__speakers {
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 50px;
+
+        .card {
+          display: flex;
+          margin-bottom: 30px;
+
+          &__photo {
+            width:  80px;
+            height: 80px;
+          }
+
+          &-description {
+            margin-left: 20px;
+
+            &__name {
+              margin: 0;
+              font-size: 15px;
+              line-height: 22px;
+            }
+
+            &__topic {
+              width: 100%;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

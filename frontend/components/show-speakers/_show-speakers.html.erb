@@ -1,0 +1,26 @@
+<section class="show-speakers">
+  <div class="show-speakers-content">
+    <ul class="show-speakers-content__nav">
+      <li><%= link_to "speakers", "#" %></li>
+      <li><%= link_to "videos", "#" %></li>
+      <li><%= link_to "photos", "#" %></li>
+    </ul>
+
+    <div class="show-speakers-content__speakers">
+      <div class="card">
+        <%= image_tag asset_pack_path('components/show-speakers/static/man.png'), class: "card__photo" %>
+        <div class="card-description">
+          <p class="card-description__name">Sergey</p>
+          <h3 class="card-description__topic">When the whole world is your database</h3>
+        </div>
+      </div>
+      <div class="card">
+        <%= image_tag asset_pack_path('components/show-speakers/static/man.png'), class: "card__photo" %>
+        <div class="card-description">
+          <p class="card-description__name">Sergey</p>
+          <h3 class="card-description__topic">When the whole world is your database</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
