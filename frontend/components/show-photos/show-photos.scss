@@ -7,6 +7,11 @@
     &__nav {
       margin: 0;
       padding: 0;
+
+      a {
+        color: #fff;
+      }
+
       li {
         text-transform: uppercase;
         font-weight: bold;
@@ -27,10 +32,6 @@
               background-color: #50E3C2;
             }
           }
-        }
-
-        a {
-          color: #fff
         }
       }
     }
