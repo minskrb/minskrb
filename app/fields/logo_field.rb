@@ -10,7 +10,7 @@ class LogoField < Administrate::Field::Base
     end
   end
 
-  def url
+  def original_url
     image_url(-> { data })
   end
 
