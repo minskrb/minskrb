@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   root 'events#index'
 
+  post '/contact_us', to: 'contact_us#processing_message'
+
   devise_for :admin_users
 
   namespace :admin do
