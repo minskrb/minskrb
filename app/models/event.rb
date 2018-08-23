@@ -2,10 +2,12 @@ class Event < ApplicationRecord
   has_many :event_items, dependent: :destroy
   has_many :event_media_partners, dependent: :destroy
   has_many :videos, as: :videoable
+  has_many :images, as: :imageable
 
   accepts_nested_attributes_for :event_items, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :event_media_partners, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :videos, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :images, allow_destroy: true, reject_if: :all_blank
 
   validates :title, :place_title, :description, :start_at, :end_at, presence: true
   validates :title, length: { in: 6..20 }
