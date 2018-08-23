@@ -10,8 +10,9 @@ Rails.application.routes.draw do
     resources :events
     resources :event_items
     resources :event_media_partners do
-      delete :remove_logo
+      resource :logos, only: :destroy, module: :event_media_partners
     end
+
     resources :videos
   end
 end
