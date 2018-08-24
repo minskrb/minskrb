@@ -34,3 +34,6 @@ import "components/show-photos/show-photos";
 import "components/show-speakers/show-speakers";
 import "components/show-videos/show-videos";
 import "components/show-about/show-about";
+
+//  simple pages
+import "components/friends-page/friends-page";
