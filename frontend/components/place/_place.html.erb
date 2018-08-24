@@ -5,7 +5,7 @@
       <span><%= l(@event.start_at) %></span>
       <span><%= @event.place_title %></span>
       <span>Oktyabrskaya str. 16a, Minsk</span>
-      <button class="btn">register</button>
+      <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     </div>
     <div class="where-item__map">
       <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc4bU611NyBZ_2PJxohPbLTpQWk7UUiaw&q=Грушевская 124">

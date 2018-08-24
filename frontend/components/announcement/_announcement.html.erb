@@ -13,7 +13,7 @@
     <div class="announcement-item__organization">
       <%= @event.place_title %>
     </div>
-    <button class="btn">register</button>
+    <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     <%= link_to "View details", "#event", class: "announcement-item__link" %>
   </div>
 </section>
