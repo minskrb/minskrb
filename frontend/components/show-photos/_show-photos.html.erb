@@ -7,17 +7,9 @@
     </ul>
 
     <div class="show-photos-content__photos">
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
-      <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
+      <% 10.times do %>
+        <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
+      <% end %>
     </div>
   </div>
 </section>

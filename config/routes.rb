@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   match '/500', to: "errors#internal_error", via: :all
   match '/422', to: "errors#unacceptable", via: :all
 
-  get '/test', to: "events#show"
+  # get '/contact_us', to: "contact_us#index"
+  resources :contact_us, only: [:index]
 
-  get '/contact_us', to: "contact_us#index"
   get '/friends', to: "friends#index"
   get '/about', to: "about#index"
 
