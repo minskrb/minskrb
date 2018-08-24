@@ -2,7 +2,7 @@
   <div class="where-item">
     <div class="where-item__info">
       <h3>When & Where_</h>
-      <span><%= @event.start_at.strftime("%d %b  %H-%M") %></span>
+      <span><%= l(@event.start_at) %></span>
       <span><%= @event.place_title %></span>
       <span>Oktyabrskaya str. 16a, Minsk</span>
       <button class="btn">register</button>

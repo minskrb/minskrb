@@ -10,4 +10,6 @@ class EventItem < ApplicationRecord
   validates_with StartEndTimeValidator
 
   enum item_type: [ :talk, :coffee_break, :registration, :after_party, :lunch ]
+
+  scope :speakers, -> { where.not(speaker_name: [nil, ""]) }
 end

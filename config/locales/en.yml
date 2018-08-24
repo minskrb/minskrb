@@ -33,3 +33,7 @@ en:
   hello: 'Hello world'
   error_in_validation_end_at: 'must be after the start date'
   error_in_validation_youtube_link: 'must be only youtube link'
+  time:
+    formats:
+      default: "%d %b  %H-%M"
+      short: "%H:%M"

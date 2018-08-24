@@ -3,7 +3,7 @@
   <h3>Shedule_</h3>
     <% @event.event_items.each do |item| %>
       <div class="shedule-item__event">
-        <p><%= item.start_at.strftime("%H:%M") %></p>
+        <p><%= l(item.start_at, format: :short) %></p>
         <p><%= item.title %></p>
         <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>
       </div>

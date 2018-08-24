@@ -11,4 +11,6 @@ class Event < ApplicationRecord
   validates :place_title, length: { maximum: 30 }
   validates :description, length: { minimum: 30 }
   validates_with StartEndTimeValidator
+
+  scope :upcoming_event, -> { where(["end_at > ?", Time.now]).first }
 end
