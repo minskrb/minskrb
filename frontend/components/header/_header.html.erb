@@ -1,5 +1,5 @@
 <header class="header" id="header">
-  <%= image_tag asset_pack_path('components/header/static/logo.svg'), class: "header-logo" %>
+  <%= link_to image_tag(asset_pack_path('components/header/static/logo.svg'), class: "header-logo"), root_path %>
   <ul class="header-nav">
     <li class="header-nav-item">
       <%= link_to "Events","#", class: "header-nav-item__link" %>

@@ -11,7 +11,7 @@
     line-height: 65px;
     position: relative;
 
-    &:after {
+    &::after {
       content: "Our Friends_";
       color: #50e3c2;
       font-size: 54px;
@@ -61,7 +61,7 @@
           font-size: 17px;
           line-height: 30px;
 
-          &:before {
+          &::before {
             content: '>> ';
           }
 
@@ -113,7 +113,7 @@
       line-height: 50px;
       margin-left: 6.51%;
 
-      &:after {
+      &::after {
         font-size: 44px;
         line-height: 65px;
         bottom: 2px;
@@ -157,7 +157,7 @@
             line-height: 21px;
             margin-right: 10px;
 
-            &:before {
+            &::before {
               content: none;
             }
           }
@@ -173,7 +173,6 @@
   }
 }
 
-
 @media screen and (max-width: 550px) {
   .friends-page {
     margin-bottom: 90px;
@@ -183,7 +182,7 @@
       line-height: 36px;
       margin-left: 5.33%;
 
-      &:after {
+      &::after {
         font-size: 30px;
         line-height: 45px;
         bottom: 2px;
