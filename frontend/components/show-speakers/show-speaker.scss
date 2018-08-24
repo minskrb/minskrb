@@ -22,7 +22,7 @@
           a {
             position: relative;
 
-            &:after {
+            &::after {
               position: absolute;
               content: '';
               width: 120%;
