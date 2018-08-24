@@ -28,6 +28,7 @@ import "components/500/500";
 import "components/header/header";
 import "components/follow/follow";
 import "components/footer/footer";
+import "components/aside/aside";
 
 // show-event
 import "components/show-photos/show-photos";

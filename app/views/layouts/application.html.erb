@@ -16,7 +16,9 @@
   </head>
 
   <body>
-    <%= c('header') %>
+    <%= c('header') do%>
+      <%= c('aside') %>
+    <% end %>
     <%= yield %>
     <%= c('footer') %>
   </body>

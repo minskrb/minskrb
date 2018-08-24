@@ -82,28 +82,6 @@
       }
     }
   }
-
-  &-links {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 331px;
-    transform: rotate(90deg);
-    position: absolute;
-    top: 130px;
-    right: -125px;
-
-    a {
-      font-size: 15px;
-      line-height: 15px;
-      margin-right: 15px;
-      color: #50e3c2;
-
-      &:hover {
-        opacity: 0.6;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -233,10 +211,6 @@
           }
         }
       }
-    }
-
-    &-links {
-      display: none;
     }
   }
 }
