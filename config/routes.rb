@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/test', to: "events#show"
   get '/friends', to: "events#friends"
   get '/about', to: "events#about"
+  get '/contact_us', to: "events#contact_us"
 
   resources :events, only: [:index, :show]
   root 'events#index'

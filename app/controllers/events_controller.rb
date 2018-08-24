@@ -8,4 +8,6 @@ class EventsController < ApplicationController
   def friends;end
 
   def about;end
+
+  def contact_us;end
 end
