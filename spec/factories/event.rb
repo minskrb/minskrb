@@ -3,7 +3,7 @@ FactoryBot.define do
     title Faker::Lorem.characters(10)
     place_title Faker::Lorem.characters(20)
     description Faker::Lorem.sentence(10)
-    start_at Time.now
+    start_at 1.day.from_now
     end_at 1.week.from_now
 
     trait :with_items do
