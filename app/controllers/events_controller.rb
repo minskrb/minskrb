@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @event = Event.where(["start_at > ?", Time.now]).first
+    @event = Event.where(["end_at > ?", Time.now]).first
   end
 
   def show
