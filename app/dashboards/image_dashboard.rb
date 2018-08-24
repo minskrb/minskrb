@@ -9,7 +9,7 @@ class ImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     imageable: Field::Polymorphic,
-    image: LogoField,
+    photo: LogoField,
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -28,7 +28,7 @@ class ImageDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :image,
+    :photo,
     :imageable,
     :id,
     :created_at,
@@ -39,7 +39,7 @@ class ImageDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :image,
+    :photo,
   ].freeze
 
   # Overwrite this method to customize how images are displayed

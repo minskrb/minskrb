@@ -13,6 +13,10 @@ Rails.application.routes.draw do
       resource :logos, only: :destroy, module: :event_media_partners
     end
     resources :videos
-    resources :images
+    resources :images do
+      resource :photos, only: :destroy, module: :images
+    end
+
+    root to: "events#index"
   end
 end
