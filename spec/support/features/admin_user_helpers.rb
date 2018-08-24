@@ -18,17 +18,19 @@ module Features
 
     def fill_event_item_form(item_params)
       click_link 'Add Event Item'
-      all('input')[6].set(item_params[:title])
-      all('input')[7].set(item_params[:speaker_name])
-      all('input')[8].set(item_params[:start_at])
-      all('input')[9].set(item_params[:end_at])
+      find('.nested-fields').find_field('Title').set(item_params[:title])
+      find('.nested-fields').find_field('Item type').set(item_params[:item_type])
+      find('.nested-fields').find_field('Description').set(item_params[:description])
+      find('.nested-fields').find_field('Speaker name').set(item_params[:speaker_name])
+      find('.nested-fields').find_field('Start at').set(item_params[:start_at])
+      find('.nested-fields').find_field('End at').set(item_params[:end_at])
       click_button 'Update Event'
     end
 
     def fill_event_media_partner_form(media_partner_params)
       click_link 'Add Event Media Partner'
-      all('input')[6].set(media_partner_params[:title])
-      all('input')[7].set(media_partner_params[:link])
+      find('.nested-fields').find_field('Title').set(media_partner_params[:title])
+      find('.nested-fields').find_field('Link').set(media_partner_params[:link])
       click_button 'Update Event'
     end
 
