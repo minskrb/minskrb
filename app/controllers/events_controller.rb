@@ -6,4 +6,6 @@ class EventsController < ApplicationController
   def show;end
 
   def friends;end
+
+  def about;end
 end

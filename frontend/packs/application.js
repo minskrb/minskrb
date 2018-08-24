@@ -37,3 +37,4 @@ import "components/show-about/show-about";
 
 //  simple pages
 import "components/friends-page/friends-page";
+import "components/about-page/about-page";
