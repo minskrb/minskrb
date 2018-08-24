@@ -31,23 +31,16 @@
       font-size: 17px;
       line-height: 17px;
       align-self: flex-end;
-
-      &:visited {
-        color: #50e3c2;
-      }
+      color: #50e3c2;
     }
 
     &__partners {
       font-size: 24px;
       line-height: 40px;
-      color: #fff;
 
       a {
         margin-top: 15px;
-
-        &:visited {
-          color: #fff;
-        }
+        color: #fff;
       }
     }
   }
