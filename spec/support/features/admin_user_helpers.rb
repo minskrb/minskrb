@@ -34,7 +34,7 @@ module Features
       click_button 'Update Event'
     end
 
-    def visit_event_item_edit_page(title)
+    def visit_event_edit_page(title)
       visit '/admin/events'
       within(:xpath, ".//tr[td[contains(text(), #{title})]]") do
         click_link 'Edit'

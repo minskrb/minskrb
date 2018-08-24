@@ -27,7 +27,7 @@ RSpec.describe 'Admin Events:', type: :system do
       let!(:event) { create(:event) }
 
       before :each do
-        visit_event_item_edit_page(event.title)
+        visit_event_edit_page(event.title)
       end
 
       it 'has an ability to go to the event edit page and see Add Event Item button' do
