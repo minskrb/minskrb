@@ -1,17 +1,22 @@
 require "administrate/field/base"
 
 class LogoField < Administrate::Field::Base
-  DEFAULT_LOGO = File.read(Rails.root.join('public/default_logo.txt'))
+  DEFAULT_IMAGE = '/assets/images/ruby.svg'.freeze
+  AVAILABLE_SIZES = [100, 300, 500, 1000].freeze
 
-  def logo
-    data.attached? ? data : DEFAULT_LOGO
+  AVAILABLE_SIZES.each do |size|
+    define_method :"x#{size}" do
+      image_url(-> { data.variant(resize: "#{size}x") })
+    end
   end
 
-  def thumbnail
-    data.url(:thumbnail)
+  def original_url
+    image_url(-> { data })
   end
 
-  def to_s
-    data
+  private
+
+  def image_url(proc)
+    data&.attached? ? proc.call : DEFAULT_IMAGE
   end
 end

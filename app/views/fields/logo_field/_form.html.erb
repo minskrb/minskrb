@@ -3,4 +3,10 @@
 </div>
 <div class="field-unit__field">
   <%= f.file_field field.attribute %>
+  <%= image_tag field.x100 %>
 </div>
+<% if field.data&.attachment.present? %>
+  <div class="field-unit__nested">
+    <%= link_to 'Remove', admin_event_media_partner_logos_path(field.data.record.id), method: :delete %>
+  </div>
+<% end %>
