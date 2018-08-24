@@ -35,5 +35,5 @@ en:
   error_in_validation_youtube_link: 'must be only youtube link'
   time:
     formats:
-      default: "%d %b  %H-%M"
+      default: "%d %b %H-%M"
       short: "%H:%M"

@@ -18,7 +18,7 @@ RSpec.describe 'Homepage:', type: :system do
       end
 
       it 'sees the event date' do
-        expect(page).to have_content event.start_at.strftime("%d %b %H-%M")
+        expect(page).to have_content I18n.l(event.start_at)
       end
 
       it 'sees the event description' do
