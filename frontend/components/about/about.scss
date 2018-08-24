@@ -89,6 +89,7 @@
             font-size: 50px;
             line-height: 68px;
           }
+
           p {
             font-size: 24px;
             line-height: 20px;
@@ -124,16 +125,20 @@
       }
 
       &__scource {
+        width: 61.33%;
         margin-top: 22px;
         flex-wrap: wrap;
 
         .card {
+          width: 33.47%;
+
           h3 {
             font-size: 40px;
             line-height: 59px;
           }
 
           p {
+            margin-top: -8px;
             font-size: 17px;
             line-height: 20px;
           }
