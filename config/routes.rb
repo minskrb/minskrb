@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :event_media_partners do
       resource :logos, only: :destroy, module: :event_media_partners
     end
-
     resources :videos
+    resources :images
   end
 end
