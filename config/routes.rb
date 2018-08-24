@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   match '/422', to: "errors#unacceptable", via: :all
 
   get '/test', to: "events#show"
-  get '/friends', to: "events#friends"
-  get '/about', to: "events#about"
-  get '/contact_us', to: "events#contact_us"
+
+  get '/contact_us', to: "contact_us#index"
+  get '/friends', to: "friends#index"
+  get '/about', to: "about#index"
 
   resources :events, only: [:index, :show]
   root 'events#index'
