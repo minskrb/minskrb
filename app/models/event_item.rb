@@ -1,7 +1,7 @@
 class EventItem < ApplicationRecord
   belongs_to :event
-  has_one :video, as: :videoable
-  has_one :image, as: :imageable
+  has_one :video, as: :videoable, dependent: :destroy
+  has_one :image, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :video, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :image, allow_destroy: true, reject_if: :all_blank
 
