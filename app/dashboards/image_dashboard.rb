@@ -22,6 +22,7 @@ class ImageDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :imageable,
+    :photo,
     :id,
   ].freeze
 
