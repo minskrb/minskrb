@@ -3,8 +3,8 @@ class ContactUsController < ApplicationController
 
   def send_message
     mail = prepare_mail
-    sg = SendGrid::API.new(api_key: '')
-    response = sg.client.mail._('send').post(request_body: mail.to_json)
+    sg = SendGrid::API.new(api_key: Rails.application.credentials.sendgrid[:api_key])
+    sg.client.mail._('send').post(request_body: mail.to_json)
   end
 
   private
