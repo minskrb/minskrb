@@ -16,7 +16,5 @@ Rails.application.routes.draw do
     resources :images do
       resource :photos, only: :destroy, module: :images
     end
-
-    root to: "events#index"
   end
 end

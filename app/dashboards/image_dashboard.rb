@@ -9,7 +9,7 @@ class ImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     imageable: Field::Polymorphic,
-    photo: LogoField,
+    photo: PhotoField,
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

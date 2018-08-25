@@ -1,0 +1,12 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <%= f.file_field field.attribute %>
+  <%= image_tag field.x100 %>
+</div>
+<% if field.data&.attachment.present? %>
+  <div class="field-unit__nested">
+    <%= link_to 'Remove', admin_image_photos_path(field.data.record.id), method: :delete %>
+  </div>
+<% end %>
