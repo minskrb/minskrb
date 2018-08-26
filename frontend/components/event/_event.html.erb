@@ -7,10 +7,10 @@
     <div class="event-share">
       <span class="event-share__title">Share +</span>
       <ul class="event-share__link">
-        <%= link_to "Facebook", "http://www.facebook.com/sharer.php?u=#{request.original_url}" %>
-        <%= link_to "Twitter", "http://twitter.com/share?url=#{request.original_url}&amp;text=Website name" %>
-        <%= link_to "LinkedIn", "http://www.linkedin.com/shareArticle?mini=true&amp;url=#{request.original_url}" %>
-        <%= link_to "Vkontakte", "http://vk.com/share.php?url=#{request.original_url}" %>
+        <%= link_to "Facebook", "http://www.facebook.com/sharer.php?u=#{request.original_url}", target: "_blank" %>
+        <%= link_to "Twitter", "http://twitter.com/share?url=#{request.original_url}&amp;text=Website name", target: "_blank" %>
+        <%= link_to "LinkedIn", "http://www.linkedin.com/shareArticle?mini=true&amp;url=#{request.original_url}", target: "_blank" %>
+        <%= link_to "Vkontakte", "http://vk.com/share.php?url=#{request.original_url}", target: "_blank" %>
       </ul>
     </div>
   </div>
