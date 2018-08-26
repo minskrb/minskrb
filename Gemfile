@@ -33,6 +33,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano', '~> 3.11'
   gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano-yarn'
   gem 'capistrano-rails'
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'capistrano-db-tasks', require: false
