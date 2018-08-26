@@ -41,6 +41,13 @@
           opacity: 0.4;
         }
       }
+
+      .active {
+        &::after {
+          width: 140%;
+          opacity: 0.4;
+        }
+      }
     }
   }
 
