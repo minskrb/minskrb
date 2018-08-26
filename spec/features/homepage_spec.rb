@@ -28,6 +28,10 @@ RSpec.describe 'Homepage:', type: :system do
       it 'sees the event shedule' do
         expect(page).to have_content event.event_items.first.title
       end
+
+      it 'sees the social network sharing section of that Event' do
+        expect(page).to have_content "Share +\nFacebook Twitter LinkedIn Vkontakte"
+      end
     end
   end
 end
