@@ -7,11 +7,10 @@
     </ul>
 
     <div class="show-videos-content__videos">
-      <% @videos.link_id.each do |video| %>
+      <% @videos.youtube_links.each do |link| %>
         <div class="card">
-          <iframe src="https://www.youtube.com/embed/<%= video %>?showinfo=0">
-          </iframe>
-          <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
+          <%= youtube_embed_code(link).html_safe %>
+          <p class="card__name"><%= youtube_title(link) %></p>
         </div>
       <% end %>
     </div>
