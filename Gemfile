@@ -20,6 +20,7 @@ gem 'file_validators'
 gem 'mini_magick'
 
 gem 'sendgrid-ruby'
+gem 'video_info'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
