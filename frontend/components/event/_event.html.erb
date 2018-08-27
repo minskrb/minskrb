@@ -1,16 +1,16 @@
 <section class="event" id="event">
-  <h3>About Beer Up!_</h3>
+  <h3>About <%= @event.title %>_</h3>
   <div class="event-item">
     <p class="event-item__content">
-      Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, cardigan raw denim quinoa. Cray paleo tattooed, Truffaut skateboard street art PBR jean shorts Shoreditch farm-to-table Austin lo-fi Odd Future occupy. Chia semiotics skateboard, Schlitz messenger bag master cleanse High Life occupy vegan polaroid tote bag leggings. Single-origin coffee mumblecore deep v salvia mlkshk. Organic photo booth cray tofu, vegan fixie bitters sriracha. Blog Austin Wes Anderson, deep v pour-over trust fund vinyl mlkshk +1.
+      <%= @event.description %>
     </p>
     <div class="event-share">
       <span class="event-share__title">Share +</span>
       <ul class="event-share__link">
-        <%= link_to "Facebook", "http://www.facebook.com/sharer.php?u=#{request.original_url}" %>
-        <%= link_to "Twitter", "http://twitter.com/share?url=#{request.original_url}&amp;text=Website name" %>
-        <%= link_to "LinkedIn", "http://www.linkedin.com/shareArticle?mini=true&amp;url=#{request.original_url}" %>
-        <%= link_to "Vkontakte", "http://vk.com/share.php?url=#{request.original_url}" %>
+        <%= link_to "Facebook", "http://www.facebook.com/sharer.php?u=#{request.original_url}", target: "_blank" %>
+        <%= link_to "Twitter", "http://twitter.com/share?url=#{request.original_url}&amp;text=Website name", target: "_blank" %>
+        <%= link_to "LinkedIn", "http://www.linkedin.com/shareArticle?mini=true&amp;url=#{request.original_url}", target: "_blank" %>
+        <%= link_to "Vkontakte", "http://vk.com/share.php?url=#{request.original_url}", target: "_blank" %>
       </ul>
     </div>
   </div>

@@ -1,9 +1,4 @@
-<%= c('announcement') %>
-<%= c('event') %>
-<%= c('shedule') %>
-<%= c('speakers') %>
-<%= c('media') %>
-<%= c('place') %>
+<%= render partial: 'event' if @event %>
 <%= c('about') %>
 <%= c('friends') %>
 <%= c('contact') %>
