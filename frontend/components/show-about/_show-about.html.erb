@@ -7,8 +7,9 @@
       <div class="show-about-content__info__media">
         <h3>media partners</h3>
         <div class="links">
-          <%= link_to "Rubyroid Labs","https://rubyroidlabs.com/", target: "_blank"%>
-          <%= link_to "Datarockets", "https://datarockets.com", target: "_blank" %>
+          <% @event.event_media_partners.each do |media| %>
+            <%= link_to ">> #{media.title}", "#{media.link}", target: "_blank" %>
+          <% end %>
         </div>
       </div>
     </div>

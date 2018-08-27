@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   match '/500', to: "errors#internal_error", via: :all
   match '/422', to: "errors#unacceptable", via: :all
 
-  # get '/contact_us', to: "contact_us#index"
   resources :contact_us, only: %i[index]
   resources :friends, only: %i[index]
   resources :about, only: %i[index]

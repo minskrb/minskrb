@@ -2,15 +2,15 @@
   <%= link_to image_tag(asset_pack_path('components/header/static/logo.svg'), class: "header-logo"), root_path %>
   <ul class="header-nav">
     <li class="header-nav-item">
-      <%= link_to "Events","#", class: "header-nav-item__link #{cp('/events')}" %>
+      <%= link_to "Events","#", class: "header-nav-item__link" %>
     </li>
     <li class="header-nav-item">
-      <%= link_to "Friends", "/friends", class: "header-nav-item__link #{cp('/friends')}" %>
+      <%= link_to "Friends", friends_path, class: "header-nav-item__link #{active_if :friends}" %>
     </li>
     <li class="header-nav-item">
-      <%= link_to "About", "/about", class: "header-nav-item__link #{cp('/about')}" %>
+      <%= link_to "About", about_index_path, class: "header-nav-item__link #{active_if :about}" %>
     <li class="header-nav-item">
-      <%= link_to "Contact Us", "/contact_us", class: "header-nav-item__link #{cp('/contact_us')}" %>
+      <%= link_to "Contact Us", contact_us_path, class: "header-nav-item__link #{active_if :contact_us}" %>
     </li>
   </ul>
   <%= image_tag asset_pack_path('components/header/static/menu.svg'), class: "burger" %>
