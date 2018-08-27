@@ -12,4 +12,5 @@ class EventItem < ApplicationRecord
   enum item_type: [ :talk, :coffee_break, :registration, :after_party, :lunch ]
 
   scope :speakers, -> { where.not(speaker_name: [nil, ""]) }
+  scope :show_speakers, -> {where(item_type: :talk)}
 end

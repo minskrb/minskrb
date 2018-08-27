@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :about, only: %i[index]
 
   resources :events, only: %i[index show]
+
+  get '/events/:id/speakers', to: 'events#show_speakers'
+  get '/events/:id/photos', to: 'events#show_photos'
+  get '/events/:id/videos', to: 'events#show_videos'
+
   root 'events#index'
 
   resources :contact_us, only: %i[create]
