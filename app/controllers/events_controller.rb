@@ -3,5 +3,7 @@ class EventsController < ApplicationController
     @event = Event.upcoming
   end
 
-  def show; end
+  def show
+    @event = Event.find(params[:id])
+  end
 end
