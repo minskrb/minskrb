@@ -33,6 +33,7 @@ class EventItemDashboard < Administrate::BaseDashboard
     :item_type,
     :description,
     :speaker_name,
+    :image,
     :start_at,
     :end_at,
   ].freeze
