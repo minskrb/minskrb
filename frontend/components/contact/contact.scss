@@ -23,7 +23,7 @@
       resize: vertical;
     }
 
-    input[type=text],
+    input[type=text], input[type=email],
     textarea {
       font-family: "Space mono", monospace;
       padding: 10px 26px 14px;
@@ -56,6 +56,7 @@
       transition: opacity 0.5s;
 
       &:hover {
+        cursor: pointer;
         opacity: 0.6;
       }
     }

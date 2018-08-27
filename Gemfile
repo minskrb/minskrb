@@ -19,6 +19,8 @@ gem 'aws-sdk-s3'
 gem 'file_validators'
 gem 'mini_magick'
 
+gem 'sendgrid-ruby'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'rails-controller-testing'

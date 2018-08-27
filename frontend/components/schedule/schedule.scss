@@ -1,4 +1,4 @@
-.shedule {
+.schedule {
   display: flex;
   justify-content: flex-end;
 
@@ -17,8 +17,8 @@
       line-height: 53px;
       position: relative;
 
-      &:after {
-        content: "Shedule_";
+      &::after {
+        content: "Schedule_";
         color: #50e3c2;
         font-size: 46px;
         line-height: 69px;
@@ -64,7 +64,6 @@
       }
 
       &:nth-child(odd) {
-
         p:nth-child(2) {
           font-weight: bold;
         }
@@ -74,7 +73,7 @@
 }
 
 @media screen and (max-width: 860px) {
-  .shedule {
+  .schedule {
     &-item {
       width: 96.06%;
 
@@ -90,7 +89,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .shedule {
+  .schedule {
     &-item {
       width: 96.06%;
 
@@ -100,15 +99,16 @@
         font-size: 24px;
         line-height: 36px;
 
-        &:after {
-        font-size: 30px;
-        line-height: 45px;
+        &::after {
+          font-size: 30px;
+          line-height: 45px;
         }
       }
 
       &__event {
         margin-left: 8%;
         flex-wrap: wrap;
+
         p {
           &:first-child {
             font-size: 14px;

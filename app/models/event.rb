@@ -13,7 +13,7 @@ class Event < ApplicationRecord
   validates :description, length: { minimum: 30 }
   validates_with StartEndTimeValidator
 
-  def self.upcoming_event
+  def self.upcoming
     where(['end_at > ?', Time.now]).first
   end
 end

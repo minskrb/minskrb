@@ -11,7 +11,7 @@ import "init";
 import "components/announcement/announcement";
 import "components/header/header";
 import "components/event/event";
-import "components/shedule/shedule";
+import "components/schedule/schedule";
 import "components/speakers/speakers";
 import "components/media/media";
 import "components/place/place";
