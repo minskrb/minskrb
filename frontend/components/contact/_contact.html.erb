@@ -1,6 +1,6 @@
 <div class="contact_us">
   <h1>Contact Us_</h1>
-  <%= form_tag("/contact_us", method: "post") do %>
+  <%= form_tag(contact_us_path, method: "post") do %>
    <%= text_field_tag "name", "", placeholder: "Name", class: "contact_us-form__input" %>
    <%= text_field_tag "email", "", placeholder: "Email *", class: "contact_us-form__input" %>
    <%= text_area_tag "message", "", placeholder: "Type your message here *", class: "contact_us-form__input" %>

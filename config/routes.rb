@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   root 'events#index'
 
-  post '/contact_us', to: 'contact_us#send_message'
+  resources :contact_us, only: %i[create]
 
   devise_for :admin_users
 

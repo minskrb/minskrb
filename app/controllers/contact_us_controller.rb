@@ -1,7 +1,7 @@
 class ContactUsController < ApplicationController
   include SendGrid
 
-  def send_message
+  def create
     mail = prepare_mail
     sg = SendGrid::API.new(api_key: Rails.application.credentials.sendgrid[:api_key])
     sg.client.mail._('send').post(request_body: mail.to_json)
