@@ -1,10 +1,6 @@
 <section class="show-videos">
   <div class="show-videos-content">
-    <ul class="show-videos-content__nav">
-      <li><%= link_to "speakers", "#" %></li>
-      <li><%= link_to "videos", "#" %></li>
-      <li><%= link_to "photos", "#" %></li>
-    </ul>
+    <%= yield %>
 
     <div class="show-videos-content__videos">
       <% @videos.youtube_links.each do |link| %>

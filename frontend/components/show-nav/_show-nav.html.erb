@@ -1,0 +1,5 @@
+<ul class="show-nav">
+  <li class="<%= cp(event_speakers_path(@event.id)) %>"><%= link_to "speakers", event_speakers_path(@event) %></li>
+  <li class="<%= cp(event_videos_path(@event.id)) %>"><%= link_to "videos", event_videos_path(@event) %></li>
+  <li class="<%= cp(event_photos_path(@event.id)) %>"><%= link_to "photos", event_photos_path(@event) %></li>
+</ul>

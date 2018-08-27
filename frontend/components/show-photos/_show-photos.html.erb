@@ -1,10 +1,6 @@
 <section class="show-photos">
   <div class="show-photos-content">
-    <ul class="show-photos-content__nav">
-      <li><%= link_to "speakers", "#" %></li>
-      <li><%= link_to "videos", "#" %></li>
-      <li><%= link_to "photos", "#" %></li>
-    </ul>
+    <%= yield %>
 
     <div class="show-photos-content__photos">
       <% 10.times do %>

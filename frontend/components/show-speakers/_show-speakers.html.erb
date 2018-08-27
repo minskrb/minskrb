@@ -1,10 +1,6 @@
 <section class="show-speakers">
   <div class="show-speakers-content">
-    <ul class="show-speakers-content__nav">
-      <li><%= link_to "speakers", "#" %></li>
-      <li><%= link_to "videos", "#" %></li>
-      <li><%= link_to "photos", "#" %></li>
-    </ul>
+    <%= yield %>
 
     <div class="show-speakers-content__speakers">
       <% @speakers.each do |speaker| %>
