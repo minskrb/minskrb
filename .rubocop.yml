@@ -704,7 +704,7 @@ Naming/UncommunicativeBlockParamName:
   # Blacklisted names that will register an offense
   ForbiddenNames: []
 
-Naming/UncommunicativeMethodArgName:
+Naming/UncommunicativeMethodParamName:
   # Argrument names may be equal to or greater than this value
   MinNameLength: 3
   AllowNamesEndingInNumbers: true
