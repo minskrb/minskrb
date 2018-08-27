@@ -1,8 +1,8 @@
-<section class="shedule">
-  <div class="shedule-item">
-  <h3>Shedule_</h3>
+<section class="schedule">
+  <div class="schedule-item">
+  <h3>Schedule_</h3>
     <% @event.event_items.each do |item| %>
-      <div class="shedule-item__event">
+      <div class="schedule-item__event">
         <p><%= l(item.start_at, format: :short) %></p>
         <p><%= item.title %></p>
         <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>

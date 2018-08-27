@@ -1,4 +1,4 @@
-.shedule {
+.schedule {
   display: flex;
   justify-content: flex-end;
 
@@ -18,7 +18,7 @@
       position: relative;
 
       &:after {
-        content: "Shedule_";
+        content: "Schedule_";
         color: #50e3c2;
         font-size: 46px;
         line-height: 69px;
@@ -74,7 +74,7 @@
 }
 
 @media screen and (max-width: 860px) {
-  .shedule {
+  .schedule {
     &-item {
       width: 96.06%;
 
@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .shedule {
+  .schedule {
     &-item {
       width: 96.06%;
 

@@ -25,7 +25,7 @@ RSpec.describe 'Homepage:', type: :system do
         expect(page).to have_content event.description
       end
 
-      it 'sees the event shedule' do
+      it 'sees the event schedule' do
         expect(page).to have_content event.event_items.first.title
       end
 
