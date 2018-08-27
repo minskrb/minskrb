@@ -7,26 +7,13 @@
     </ul>
 
     <div class="show-videos-content__videos">
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?showinfo=0">
-        </iframe>
-        <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
-      </div>
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?showinfo=0">
-        </iframe>
-        <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
-      </div>
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?showinfo=0">
-        </iframe>
-        <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
-      </div>
-      <div class="card">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?showinfo=0">
-        </iframe>
-        <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
-      </div>
+      <% @videos.link_id.each do |video| %>
+        <div class="card">
+          <iframe src="https://www.youtube.com/embed/<%= video %>?showinfo=0">
+          </iframe>
+          <p class="card__name">When the boobs whole world is your database (Sergey Sergyenko)</p>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>

@@ -6,4 +6,6 @@ class Video < ApplicationRecord
                            length: { maximum: 128 },
                            format: { with: /\A(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/,
                                      message: I18n.t('.error_in_validation_youtube_link') }
+
+  scope :link_id, -> {map { |link| link.youtube_link.split('=')[1] }}
 end

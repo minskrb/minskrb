@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   end
 
   def show_videos
-
+    @videos = @event.videos
   end
 
   private
