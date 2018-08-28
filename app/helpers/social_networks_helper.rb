@@ -12,7 +12,7 @@ module SocialNetworksHelper
       twitter: 'https://twitter.com/datarockets',
       youtube: 'https://www.youtube.com/channel/UC3FaevGv94T9zvtHlL9ch1g'
     },
-    rubyroidlabs: {
+    rubyroid: {
       facebook: 'https://www.facebook.com/rubyroidlabs',
       vk: 'https://www.vk.com/bsuiror',
       twitter: 'https://twitter.com/RubyroidLabs',
