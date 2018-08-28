@@ -1,0 +1,17 @@
+<section class="show-about">
+  <div class="show-about-content">
+    <h1>Minsk.rb <%= @event.title %></h1>
+    <div class="show-about-content__info">
+      <div class="show-about-content__info__date"><%= l(@event.start_at) %></div>
+      <div class="show-about-content__info__description"><%= @event.description %></div>
+      <div class="show-about-content__info__media">
+        <h3>media partners</h3>
+        <div class="links">
+          <% @event.event_media_partners.each do |media| %>
+            <%= link_to ">> #{media.title}", "#{media.link}", target: "_blank" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -14,7 +14,8 @@ body {
     list-style: none;
   }
 
-  button {
+  .button {
+    display: inline-block;
     margin-top: 48px;
     padding: 11px 42px 14px 43px;
     color: #50e3c2;

@@ -1,0 +1,54 @@
+<section class="friends-page">
+  <h3>Our Friends_</h3>
+  <div class="friends-page-content">
+    <div class="friends-page-content__card">
+      <%= link_to image_tag(asset_pack_path('components/friends-page/static/rubyroidlabs.svg'), class: "rubyroidlabs"), "https://rubyroidlabs.com/", target: "_blank" %>
+      <div class="links">
+        <%= link_to_social(:rubyroid, :facebook) %>
+        <%= link_to_social(:rubyroid, :vk) %>
+        <%= link_to_social(:rubyroid, :twitter) %>
+        <%= link_to_social(:rubyroid, :youtube) %>
+      </div>
+
+      <div class="icons">
+        <%= link_to_social(:rubyroid, :facebook, true) %>
+        <%= link_to_social(:rubyroid, :vk, true) %>
+        <%= link_to_social(:rubyroid, :twitter, true) %>
+        <%= link_to_social(:rubyroid, :youtube, true) %>
+      </div>
+    </div>
+
+    <div class="friends-page-content__card">
+      <%= link_to image_tag(asset_pack_path('components/friends-page/static/datarockets.svg'), class: "datarockets"), "https://datarockets.com", target: "_blank" %>
+      <div class="links">
+        <%= link_to_social(:datarockets, :facebook) %>
+        <%= link_to_social(:datarockets, :vk) %>
+        <%= link_to_social(:datarockets, :twitter) %>
+        <%= link_to_social(:datarockets, :youtube) %>
+      </div>
+
+      <div class="icons">
+        <%= link_to_social(:datarockets, :facebook, true) %>
+        <%= link_to_social(:datarockets, :vk, true) %>
+        <%= link_to_social(:datarockets, :twitter, true) %>
+        <%= link_to_social(:datarockets, :youtube, true) %>
+      </div>
+    </div>
+
+    <div class="friends-page-content__card">
+      <%= link_to image_tag(asset_pack_path('components/friends-page/static/cybergizer.svg'), class: "cybergizer"), "https://cybergizer.com", target: "_blank" %>
+      <div class="links">
+        <%= link_to_social(:cybergizer, :facebook) %>
+        <%= link_to_social(:cybergizer, :linkedin) %>
+        <%= link_to_social(:cybergizer, :youtube) %>
+      </div>
+
+      <div class="icons">
+        <%= link_to_social(:cybergizer, :facebook, true) %>
+        <%= link_to_social(:cybergizer, :linkedin, true) %>
+        <%= link_to_social(:cybergizer, :youtube, true) %>
+      </div>
+    </div>
+  </div>
+  <%= yield %>
+</section>

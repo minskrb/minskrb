@@ -1,4 +1,4 @@
-<div class="contact_us">
+<div class="contact_us" id="contact_us">
   <h1>Contact Us_</h1>
   <%= form_tag(contact_us_path, method: "post", remote: true, authenticity_token: true) do %>
     <%= text_field_tag "name", "", placeholder: "Name", class: "contact_us-form__input", maxlength: 50 %>

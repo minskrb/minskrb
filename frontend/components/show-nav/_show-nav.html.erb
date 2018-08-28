@@ -1,0 +1,5 @@
+<ul class="show-nav">
+  <li class="<%= active_if :speakers %>"><%= link_to "speakers", event_speakers_path(@event) %></li>
+  <li class="<%= active_if :videos %>"><%= link_to "videos", event_videos_path(@event) %></li>
+  <li class="<%= active_if :photos %>"><%= link_to "photos", event_photos_path(@event) %></li>
+</ul>

@@ -1,0 +1,17 @@
+<section class="show-speakers">
+  <div class="show-speakers-content">
+    <%= yield %>
+
+    <div class="show-speakers-content__speakers">
+      <% @speakers.each do |speaker| %>
+        <div class="card">
+          <%= image_tag asset_pack_path('components/show-speakers/static/man.png'), class: "card__photo" %>
+          <div class="card-description">
+            <p class="card-description__name"><%= speaker.speaker_name %></p>
+            <h3 class="card-description__topic"><%= speaker.title %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

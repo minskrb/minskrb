@@ -1,0 +1,14 @@
+<section class="show-videos">
+  <div class="show-videos-content">
+    <%= yield %>
+
+    <div class="show-videos-content__videos">
+      <% @videos.links.each do |link| %>
+        <div class="card">
+          <%= youtube_embed_code(link).html_safe %>
+          <p class="card__name"><%= youtube_title(link) %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

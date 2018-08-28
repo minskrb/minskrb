@@ -93,4 +93,5 @@ ActiveRecord::Schema.define(version: 2018_08_16_064337) do
     t.datetime "updated_at", null: false
     t.index ["videoable_type", "videoable_id"], name: "index_videos_on_videoable_type_and_videoable_id"
   end
+
 end

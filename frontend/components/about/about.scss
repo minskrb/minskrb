@@ -64,15 +64,18 @@
 @media screen and (max-width: 950px) {
   .about {
     h1 {
+      font-size: 54px;
+      line-height: 79px;
       margin-left: 6.51%;
     }
 
     &-item {
+      margin: 0 auto;
       margin-top: 24px;
-      margin-left: 10.42%;
       width: 83.07%;
 
       p {
+        width: 100%;
         font-size: 17px;
         line-height: 34px;
       }
@@ -82,12 +85,21 @@
         width: 100%;
 
         .card {
-          width: 50%;
+          h3 {
+            font-size: 50px;
+            line-height: 68px;
+          }
+
+          p {
+            font-size: 24px;
+            line-height: 20px;
+          }
         }
       }
 
       &__link {
         margin-top: 62px;
+        margin-bottom: 120px;
       }
     }
   }
@@ -113,16 +125,20 @@
       }
 
       &__scource {
+        width: 61.33%;
         margin-top: 22px;
         flex-wrap: wrap;
 
         .card {
+          width: 33.47%;
+
           h3 {
             font-size: 40px;
             line-height: 59px;
           }
 
           p {
+            margin-top: -8px;
             font-size: 17px;
             line-height: 20px;
           }

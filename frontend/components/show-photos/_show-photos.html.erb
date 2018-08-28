@@ -1,0 +1,11 @@
+<section class="show-photos">
+  <div class="show-photos-content">
+    <%= yield %>
+
+    <div class="show-photos-content__photos">
+      <% 10.times do %>
+        <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
+      <% end %>
+    </div>
+  </div>
+</section>

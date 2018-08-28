@@ -1,0 +1,124 @@
+.show-photos {
+  &-content {
+    margin-top: 80px;
+    margin-left: 7.29%;
+    display: flex;
+
+    &__nav {
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: #fff;
+      }
+
+      li {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 60px;
+
+        &:last-child {
+          a {
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: '';
+              width: 120%;
+              height: 4px;
+              top: 18px;
+              left: -10%;
+              background-color: #50e3c2;
+            }
+          }
+        }
+      }
+    }
+
+    &__photos {
+      margin-left: 6.74%;
+      display: flex;
+      flex-wrap: wrap;
+
+      & img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 40px;
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .show-photos {
+    &-content {
+      margin-top: 50px;
+      margin-left: 7.16%;
+      flex-direction: column;
+
+      &__nav {
+        width: 52.6%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          font-size: 22px;
+          line-height: 33px;
+        }
+      }
+
+      &__photos {
+        margin: 0;
+        margin-top: 60px;
+
+        & img {
+          margin-bottom: 34px;
+          margin-right: 34px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .show-photos {
+    &-content {
+      margin: 0 auto;
+      margin-top: 40px;
+
+      &__nav {
+        width: 89.07%;
+        margin: 0 auto;
+
+        li {
+          font-size: 18px;
+          line-height: 26px;
+
+          &:first-child {
+            a {
+              &::after {
+                top: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      &__photos {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        justify-content: space-between;
+
+        & img {
+          width: 157px;
+          height: 157px;
+          margin-bottom: 21px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

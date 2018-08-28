@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Minskrb</title>
+    <title>Minsk.rb Community</title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +16,9 @@
   </head>
 
   <body>
-    <%= c('header') %>
+    <%= c('header') do %>
+      <%= c('aside') %>
+    <% end %>
     <%= yield %>
     <%= c('footer') %>
   </body>

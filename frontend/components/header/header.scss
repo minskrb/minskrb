@@ -1,21 +1,21 @@
-header {
+.header {
   width: 86.11%;
   height: 85px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 
-  .logo {
+  &-logo {
     margin-top: 31px;
   }
 
-  .nav {
+  &-nav {
     margin-top: 47px;
     width: 29.31%;
     display: flex;
     justify-content: space-between;
 
-    .nav-item {
+    &-item {
       font-family: "Space Mono", monospace;
       font-size: 16px;
       line-height: 24px;
@@ -41,6 +41,13 @@ header {
           opacity: 0.4;
         }
       }
+
+      .active {
+        &::after {
+          width: 140%;
+          opacity: 0.4;
+        }
+      }
     }
   }
 
@@ -50,27 +57,27 @@ header {
 }
 
 @media screen and (max-width: 1200px) {
-  header {
+  .header {
     width: 86.98%;
 
-    .nav {
+    &-nav {
       width: 54.95%;
     }
   }
 }
 
 @media screen and (max-width: 750px) {
-  header {
+  .header {
     width: 89.44%;
     height: 56px;
 
-    .logo {
+    &-logo {
       width: 117px;
       height: 36px;
       margin-top: 20px;
     }
 
-    .nav {
+    &-nav {
       justify-content: flex-end;
 
       &-item {
@@ -88,14 +95,14 @@ header {
 }
 
 @media screen and (max-width: 550px) {
-  header.responsive {
+  .responsive {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: auto;
     position: relative;
 
-    .nav {
+    .header-nav {
       flex-direction: column;
       align-items: center;
       margin-top: 10px;

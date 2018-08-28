@@ -1,10 +1,10 @@
 <section class="follow_us">
   <h3>Follow Us_</h3>
   <div class="follow_us-social">
-    <%= link_to content_tag(:i, "", class: "icon fab fa-github"), "#", class: "follow_us-social__link" %>
-    <%= link_to content_tag(:i, "", class: "icon fab fa-facebook-square"), "#", class: "follow_us-social__link" %>
-    <%= link_to content_tag(:i, "", class: "icon fab fa-vk"), "#", class: "follow_us-social__link" %>
-    <%= link_to content_tag(:i, "", class: "icon fab fa-twitter"), "#", class: "follow_us-social__link" %>
-    <%= link_to content_tag(:i, "", class: "icon fab fa-youtube"), "#", class: "follow_us-social__link" %>
+    <%= link_to_social(:minskrb, :github, true, 'follow_us-social__link') %>
+    <%= link_to_social(:minskrb, :facebook, true, 'follow_us-social__link') %>
+    <%= link_to_social(:minskrb, :vk, true, 'follow_us-social__link') %>
+    <%= link_to_social(:minskrb, :twitter, true, 'follow_us-social__link') %>
+    <%= link_to_social(:minskrb, :youtube, true, 'follow_us-social__link') %>
   </div>
 </section>
