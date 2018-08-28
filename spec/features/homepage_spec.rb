@@ -8,7 +8,7 @@ RSpec.describe 'Homepage:', type: :system do
   end
 
   context 'on the user homepage' do
-    describe 'when event exists' do
+    context 'when event exists' do
       it 'sees the event title' do
         expect(page).to have_content event.title
       end
@@ -31,6 +31,14 @@ RSpec.describe 'Homepage:', type: :system do
 
       it 'sees the social network sharing section of that Event' do
         expect(page).to have_content "Share +\nFacebook Twitter LinkedIn Vkontakte"
+      end
+    end
+
+    context 'when event upcoming' do
+      let(:event) { nil }
+
+      it 'sees the comming soon block' do
+        expect(page).to have_content 'At this moment event is not planed. Come again :)'
       end
     end
   end
