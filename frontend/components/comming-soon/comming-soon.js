@@ -1,1 +1,0 @@
-import "./comming-soon.scss";

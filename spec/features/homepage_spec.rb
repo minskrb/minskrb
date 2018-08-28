@@ -37,7 +37,7 @@ RSpec.describe 'Homepage:', type: :system do
     context 'when event upcoming' do
       let(:event) { nil }
 
-      it 'sees the comming soon block' do
+      it 'sees the coming soon block' do
         expect(page).to have_content 'At this moment event is not planed. Come again :)'
       end
     end

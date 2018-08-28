@@ -18,7 +18,7 @@ import "components/place/place";
 import "components/about/about";
 import "components/contact/contact";
 import "components/friends/friends";
-import "components/comming-soon/comming-soon";
+import "components/coming-soon/coming-soon";
 
 // errors
 import "components/404/404";
