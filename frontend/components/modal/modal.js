@@ -1,7 +1,7 @@
 import "./modal.scss";
 
 $(document).ready(() => {
-  $("#submit").on("click", () => {
+  $("#contact_form").on("ajax:success", () => {
     $("#modal")
       .css("display", "flex")
       .delay(5000)
