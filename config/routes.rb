@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :friends, only: %i[index]
   resources :about, only: %i[index]
 
-  resources :events, only: %i[index] do
+  resources :events, only: %i[index show] do
     resources :speakers, only: %i[index], module: :events
     resources :photos, only: %i[index], module: :events
     resources :videos, only: %i[index], module: :events
