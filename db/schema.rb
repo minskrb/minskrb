@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_193430) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "place_title"
-    t.string "place_cordinate"
+    t.string "cordinate"
     t.text "description"
     t.datetime "start_at"
     t.datetime "end_at"

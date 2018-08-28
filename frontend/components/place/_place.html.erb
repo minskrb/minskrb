@@ -4,11 +4,11 @@
       <h3>When & Where_</h>
       <span><%= l(@event.start_at) %></span>
       <span><%= @event.place_title %></span>
-      <span><%= @event.place_cordinate %></span>
+      <span><%= @event.cordinate %></span>
       <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     </div>
     <div class="where-item__map">
-      <iframe src=<%= google_api_cordinate(@event.place_cordinate) %>></iframe>
+      <iframe src=<%= google_api_cordinate(@event.cordinate) %>></iframe>
     </div>
   </div>
 </section>
