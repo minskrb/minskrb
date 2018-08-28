@@ -1,54 +1,54 @@
 <section class="friends-page">
   <h3>Our Friends_</h3>
   <div class="friends-page-content">
-
     <div class="friends-page-content__card">
       <%= link_to image_tag(asset_pack_path('components/friends-page/static/rubyroidlabs.svg'), class: "rubyroidlabs"), "https://rubyroidlabs.com/", target: "_blank" %>
       <div class="links">
-        <%= link_to "Facebook", "https://www.facebook.com/rubyroidlabs", target: "_blank" %>
-        <%= link_to "Vkontakte", "https://vk.com/bsuiror", target: "_blank" %>
-        <%= link_to "Twitter", "https://twitter.com/RubyroidLabs", target: "_blank" %>
-        <%= link_to "Youtube", "https://www.youtube.com/channel/UCVMhNTgjF6jTeTmX-DXvQBw", target: "_blank" %>
+        <%= link_to_social(:rubyroid, :facebook) %>
+        <%= link_to_social(:rubyroid, :vk) %>
+        <%= link_to_social(:rubyroid, :twitter) %>
+        <%= link_to_social(:rubyroid, :youtube) %>
       </div>
 
       <div class="icons">
-        <%= link_to content_tag(:i, "", class: "icon fab fa-facebook-square"), "https://www.facebook.com/rubyroidlabs", target: "_blank" %>
-        <%= link_to content_tag(:i, "", class: "icon fab fa-vk"), "https://vk.com/bsuiror", target: "_blank" %>
-        <%= link_to content_tag(:i, "", class: "icon fab fa-twitter"), "https://twitter.com/RubyroidLabs", target: "_blank" %>
-        <%= link_to content_tag(:i, "", class: "icon fab fa-youtube"), "https://www.youtube.com/channel/UCVMhNTgjF6jTeTmX-DXvQBw", target: "_blank" %>
+        <%= link_to_social(:rubyroid, :facebook, true) %>
+        <%= link_to_social(:rubyroid, :vk, true) %>
+        <%= link_to_social(:rubyroid, :twitter, true) %>
+        <%= link_to_social(:rubyroid, :youtube, true) %>
       </div>
     </div>
 
     <div class="friends-page-content__card">
       <%= link_to image_tag(asset_pack_path('components/friends-page/static/datarockets.svg'), class: "datarockets"), "https://datarockets.com", target: "_blank" %>
       <div class="links">
-        <%= link_to "Facebook", "https://www.facebook.com/datarockets", target: "_blank" %>
-        <%= link_to "Twitter", "https://twitter.com/datarockets", target: "_blank" %>
-        <%= link_to "Youtube", "https://www.youtube.com/channel/UC3FaevGv94T9zvtHlL9ch1g", target: "_blank" %>
-        </div>
+        <%= link_to_social(:datarockets, :facebook) %>
+        <%= link_to_social(:datarockets, :vk) %>
+        <%= link_to_social(:datarockets, :twitter) %>
+        <%= link_to_social(:datarockets, :youtube) %>
+      </div>
 
-        <div class="icons">
-          <%= link_to content_tag(:i, "", class: "icon fab fa-facebook-square"), "https://www.facebook.com/datarockets", target: "_blank" %>
-          <%= link_to content_tag(:i, "", class: "icon fab fa-vk"), "https://vk.com/datarockets", target: "_blank" %>
-          <%= link_to content_tag(:i, "", class: "icon fab fa-twitter"), "https://twitter.com/datarockets", target: "_blank" %>
-          <%= link_to content_tag(:i, "", class: "icon fab fa-youtube"), "https://www.youtube.com/channel/UC3FaevGv94T9zvtHlL9ch1g", target: "_blank" %>
-        </div>
+      <div class="icons">
+        <%= link_to_social(:datarockets, :facebook, true) %>
+        <%= link_to_social(:datarockets, :vk, true) %>
+        <%= link_to_social(:datarockets, :twitter, true) %>
+        <%= link_to_social(:datarockets, :youtube, true) %>
+      </div>
     </div>
 
     <div class="friends-page-content__card">
       <%= link_to image_tag(asset_pack_path('components/friends-page/static/cybergizer.svg'), class: "cybergizer"), "https://cybergizer.com", target: "_blank" %>
       <div class="links">
-        <%= link_to "Facebook", "https://www.facebook.com/cybergizer/", target: "_blank" %>
-        <%= link_to "LinkedIn", "https://www.linkedin.com/company/cybergizer-llc", target: "_blank" %>
-        <%= link_to "Youtube", "https://www.youtube.com/channel/UCmf-vqfDm6TlAdJU7djBXgQ", target: "_blank" %>
+        <%= link_to_social(:cybergizer, :facebook) %>
+        <%= link_to_social(:cybergizer, :linkedin) %>
+        <%= link_to_social(:cybergizer, :youtube) %>
       </div>
 
       <div class="icons">
-        <%= link_to content_tag(:i, "", class: "icon fab fa-facebook-square"), "https://www.facebook.com/cybergizer/", target: "_blank" %>
-        <%= link_to content_tag(:i, "", class: "icon fab fa-linkedin"), "https://www.linkedin.com/company/cybergizer-llc", target: "_blank" %>
-        <%= link_to content_tag(:i, "", class: "icon fab fa-youtube"), "https://www.youtube.com/channel/UCmf-vqfDm6TlAdJU7djBXgQ", target: "_blank" %>
+        <%= link_to_social(:cybergizer, :facebook, true) %>
+        <%= link_to_social(:cybergizer, :linkedin, true) %>
+        <%= link_to_social(:cybergizer, :youtube, true) %>
       </div>
     </div>
   </div>
-<%= yield %>
+  <%= yield %>
 </section>

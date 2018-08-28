@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  match '/404', to: "errors#not_found", via: :all
-  match '/500', to: "errors#internal_error", via: :all
-  match '/422', to: "errors#unacceptable", via: :all
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#internal_error', via: :all
+  match '/422', to: 'errors#unacceptable', via: :all
 
-  resources :contact_us, only: %i[index]
+  root 'events#index'
+  devise_for :admin_users
+
+  resources :contact_us, only: %i[create index]
   resources :friends, only: %i[index]
   resources :about, only: %i[index]
 
@@ -13,14 +16,8 @@ Rails.application.routes.draw do
     resources :videos, only: %i[index], module: :events
   end
 
-  root 'events#index'
-
-  resources :contact_us, only: %i[create]
-
-  devise_for :admin_users
-
   namespace :admin do
-    root to: "events#index"
+    root to: 'events#index'
 
     resources :events
     resources :event_items

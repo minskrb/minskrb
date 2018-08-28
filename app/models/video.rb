@@ -7,5 +7,5 @@ class Video < ApplicationRecord
                            format: { with: /\A(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+/,
                                      message: I18n.t('.error_in_validation_youtube_link') }
 
-  scope :youtube_links, -> { pluck(:youtube_link) }
+  scope :links, -> { pluck(:youtube_link) }
 end

@@ -2,7 +2,7 @@
   <%= link_to image_tag(asset_pack_path('components/header/static/logo.svg'), class: "header-logo"), root_path %>
   <ul class="header-nav">
     <li class="header-nav-item">
-      <%= link_to "Events","#", class: "header-nav-item__link" %>
+      <%= link_to "Events", root_path, class: "header-nav-item__link" %>
     </li>
     <li class="header-nav-item">
       <%= link_to "Friends", friends_path, class: "header-nav-item__link #{active_if :friends}" %>
