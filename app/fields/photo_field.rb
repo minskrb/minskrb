@@ -1,6 +1,6 @@
 require "administrate/field/base"
 
-class LogoField < Administrate::Field::Base
+class PhotoField < Administrate::Field::Base
   DEFAULT_IMAGE = '/assets/images/ruby.svg'.freeze
   AVAILABLE_SIZES = [100, 300, 500, 1000].freeze
 
