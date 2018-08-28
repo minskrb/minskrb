@@ -38,6 +38,9 @@ import "components/show-videos/show-videos";
 import "components/show-about/show-about";
 import "components/show-nav/show-nav";
 
-//  simple pages
+// simple pages
 import "components/friends-page/friends-page";
 import "components/about-page/about-page";
+
+// slider
+import "components/events/events";

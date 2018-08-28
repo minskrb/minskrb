@@ -1,0 +1,15 @@
+<section class="events">
+  <div class="events-pagination">
+    <% 10.times do |i|%>
+      <span class="events-pagination__index" onclick="currentSlide()"><%= i+1 %></span>
+    <% end %>
+  </div>
+  <div class="events-content"></div>
+  <div class="events-selector">
+    <div class="events-scroll">
+      <div class="events-scroll__up"><</div>
+      <div class="events-scroll__scroll">Scroll</div>
+      <div class="events-scroll__down">></div>
+    </div>
+  </div>
+</section>

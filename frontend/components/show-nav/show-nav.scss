@@ -3,10 +3,10 @@
   padding: 0;
 
   li {
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 24px;
+    font-weight: bold;
     line-height: 60px;
+    text-transform: uppercase;
 
     a {
       color: #fff;
@@ -17,13 +17,13 @@
         position: relative;
 
         &::after {
-          position: absolute;
-          content: '';
-          width: 120%;
-          height: 4px;
-          top: 18px;
-          left: -10%;
           background-color: #50e3c2;
+          content: '';
+          height: 4px;
+          left: -10%;
+          position: absolute;
+          top: 18px;
+          width: 120%;
         }
       }
     }
@@ -32,9 +32,9 @@
 
 @media screen and (max-width: 900px) {
   .show-nav {
-    width: 52.6%;
     display: flex;
     justify-content: space-between;
+    width: 52.6%;
 
     li {
       font-size: 22px;
@@ -45,8 +45,8 @@
 
 @media screen and (max-width: 550px) {
   .show-nav {
-    width: 89.07%;
     margin: 0 auto;
+    width: 89.07%;
 
     li {
       font-size: 18px;
