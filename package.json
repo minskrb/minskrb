@@ -2,11 +2,12 @@
   "name": "minskrb",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "@rails/webpacker": "3.5",
     "autoprefixer": "^9.1.1",
     "jquery": "^3.3.1",
     "normalize.css": "^7.0.0",
-    "@fortawesome/fontawesome-free": "^5.2.0"
+    "rails-ujs": "^5.2.1"
   },
   "scripts": {
     "lint-staged": "$(yarn bin)/lint-staged"

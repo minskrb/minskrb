@@ -47,3 +47,20 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .modal {
+    &-content {
+      width: 90%;
+
+      h1 {
+        width: 75%;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 // main page
+
 import "init";
 import "components/announcement/announcement";
 import "components/event/event";
@@ -46,3 +47,8 @@ import "components/events/events";
 
 // modal
 import "components/modal/modal";
+
+// rails-ujs
+import Rails from "rails-ujs";
+
+Rails.start();
