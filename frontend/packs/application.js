@@ -43,3 +43,6 @@ import "components/about-page/about-page";
 
 // slider
 import "components/events/events";
+
+// modal
+import "components/modal/modal";
