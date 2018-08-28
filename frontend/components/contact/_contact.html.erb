@@ -1,6 +1,6 @@
 <section class="contact_us" id="contact_us">
   <h1>Contact Us_</h1>
-  <%= form_tag(contact_us_path, method: "post", remote: true,authenticity_token: true, id: "contact_form") do %>
+  <%= form_tag(contact_us_path, method: "post", remote: true, authenticity_token: true, id: "contact_form") do %>
     <%= text_field_tag "name", "", placeholder: "Name", class: "contact_us-form__input", maxlength: 50, autocomplete: :off %>
     <%= email_field_tag "email", "", placeholder: "Email *", class: "contact_us-form__input", maxlength: 50, autocomplete: :off, required: true %>
     <%= text_area_tag "message", "", placeholder: "Type your message here *", class: "contact_us-form__input", maxlength: 256,  required: true %>
