@@ -1,0 +1,33 @@
+.coming-soon {
+  color: #fff;
+
+  h2 {
+    font-size: 3vw;
+    line-height: 5vw;
+    margin-left: 14.58%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .coming-soon {
+    h2 {
+      font-size: 35px;
+      line-height: 55px;
+      margin-left: 6.51%;
+      width: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .coming-soon {
+    background: none;
+
+    h2 {
+      margin-left: 5.33%;
+      font-size: 25px;
+      line-height: 30px;
+      width: 90%;
+    }
+  }
+}

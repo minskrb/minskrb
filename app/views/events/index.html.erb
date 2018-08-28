@@ -1,4 +1,8 @@
-<%= render partial: 'event' if @event.present? %>
+<% if @event.present? %>
+  <%= render partial: 'event' %>
+<% else %>
+  <%= c('coming-soon') %>
+<% end %>
 <%= c('about') %>
 <%= c('friends') %>
 <%= c('contact') %>
