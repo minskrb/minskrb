@@ -15,4 +15,6 @@ class EventItem < ApplicationRecord
 
   scope :speakers, -> { where.not(speaker_name: [nil, ""]) }
   scope :talks, -> { where(item_type: :talk) }
+
+  scope :schedule, -> { sort_by(&:start_at) }
 end
