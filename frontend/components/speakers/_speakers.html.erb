@@ -1,10 +1,10 @@
 <section class="speakers">
   <h3>Speakers_</h3>
   <div class="speakers-item">
-    <% @event.event_items.talks.each do |item| %>
+    <% @event.event_items.talks.each do |speaker| %>
       <div class="speakers-item__card">
-        <%= image_tag asset_pack_path('components/speakers/static/man.png') %>
-        <p><%= item.speaker_name %></p>
+        <%= image_tag speaker.image.photo %>
+        <p><%= speaker.speaker_name %></p>
       </div>
     <% end %>
   </div>
