@@ -15,7 +15,7 @@ RSpec.describe Event, type: :model do
     end
 
     describe '#coordinate' do
-      it { should validate_length_of(:coordinate).is_at_most(150) }  
+      it { should validate_length_of(:coordinate).is_at_most(150) }
     end
 
     describe '#description' do

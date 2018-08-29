@@ -8,7 +8,7 @@
       <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     </div>
     <div class="where-item__map">
-      <iframe src=<%= google_api_coordinate(@event.coordinate) %>></iframe>
+      <iframe src=<%= google_api_coordinate(@event.latitude, @event.longitude) %>></iframe>
     </div>
   </div>
 </section>
