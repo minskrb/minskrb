@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 2018_08_23_193430) do
     t.text "description"
     t.datetime "start_at"
     t.datetime "end_at"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

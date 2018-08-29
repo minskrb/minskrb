@@ -19,4 +19,11 @@ class Event < ApplicationRecord
   def self.upcoming
     where(['end_at > ?', Time.now]).first
   end
+
+  geocoded_by :coordinate
+  after_validation :geocode_coordinate, if: :coordinate_changed?
+
+  def geocode_coordinate
+    self.latitude, self.longitude = Geocoder.coordinates(coordinate)
+  end
 end
