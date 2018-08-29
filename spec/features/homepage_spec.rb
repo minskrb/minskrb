@@ -17,8 +17,8 @@ RSpec.describe 'Homepage:', type: :system do
         expect(page).to have_content event.place_title
       end
 
-      it 'sees the event place cordinate' do
-        expect(page).to have_content event.cordinate
+      it 'sees the event place coordinate' do
+        expect(page).to have_content event.coordinate
       end
 
       it 'sees the event date' do

@@ -10,7 +10,7 @@ module Features
     def fill_event_form(event_params)
       fill_in 'event_title', with: event_params[:title]
       fill_in 'event_place_title', with: event_params[:place_title]
-      fill_in 'event_cordinate', with: event_params[:cordinate]
+      fill_in 'event_coordinate', with: event_params[:coordinate]
       fill_in 'event_description', with: event_params[:description]
       fill_in 'event_start_at', with: event_params[:start_at]
       fill_in 'event_end_at', with: event_params[:end_at]
