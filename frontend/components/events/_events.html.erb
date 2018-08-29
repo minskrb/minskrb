@@ -7,16 +7,34 @@
   </div>
 
   <div class="events-content">
-    <h1>Minsk rb! Beer Up!</h1>
-    <div class="events-content__date">11 03 1997</div>
-  </div>
+    <%= link_to "Minsk rb! Beer Up!", "#", class: "events-content__link"  %>
+    <div class="events-content__date">11 Sep 1997</div>
+    <div class="events-content__shedule">
+      <% 6.times do %>
+        <div class="item">
+          <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+        </div>
+      <% end %>
+    </div>
 
-  <div class="events-selector">
-    <div class="events-scroll">
-      <div class="events-scroll__up"><</div>
-      <div class="events-scroll__scroll">Scroll</div>
-      <div class="events-scroll__down">></div>
+    <div class="events-content__links">
+      <%= link_to "#" do %>
+        <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+        <span>124</span>
+      <% end %>
+
+      <%= link_to "#" do %>
+        <%= content_tag(:i, '', class: "icon fas fa-video") %>
+        <span>124</span>
+      <% end %>
     </div>
   </div>
-
+<div class="events-selector">
+  <div class="events-selector-scroll">
+    <div class="events-selector-scroll__up"><</div>
+    <div class="events-selector-scroll__scroll">Scroll</div>
+    <div class="events-selector-scroll__down">></div>
+  </div>
+  <div class="events-selector-count">15</div>
+</div>
 </section>
