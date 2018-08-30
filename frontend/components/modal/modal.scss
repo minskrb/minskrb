@@ -12,12 +12,12 @@
   opacity: 0.8;
 
   &-content {
-    position: fixed;
-    font-family: 'Space Mono', monospace;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    font-family: 'Space Mono', monospace;
+    position: fixed;
 
     h1 {
       margin: 0;
@@ -54,8 +54,8 @@
       width: 90%;
 
       h1 {
-        width: 75%;
         text-align: center;
+        width: 75%;
       }
 
       p {
