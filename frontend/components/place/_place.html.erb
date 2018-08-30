@@ -1,14 +1,14 @@
 <section class="where">
   <div class="where-item">
     <div class="where-item__info">
-      <h3>When & Where_</h>
+      <h3>When & Where_</h3>
       <span><%= l(@event.start_at) %></span>
       <span><%= @event.place_title %></span>
-      <span><%= @event.coordinate %></span>
+      <span><%= @event.address %></span>
       <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     </div>
     <div class="where-item__map">
-      <iframe src=<%= google_api_coordinate(@event.latitude, @event.longitude) %>></iframe>
+      <iframe src=<%= google_map(@event.address) %>></iframe>
     </div>
   </div>
 </section>

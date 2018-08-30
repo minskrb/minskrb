@@ -83,9 +83,7 @@ ActiveRecord::Schema.define(version: 2018_08_29_224044) do
     t.datetime "end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
-    t.string "coordinate"
+    t.string "address"
   end
 
   create_table "images", force: :cascade do |t|

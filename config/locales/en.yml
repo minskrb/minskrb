@@ -33,7 +33,6 @@ en:
   hello: 'Hello world'
   error_in_validation_end_at: 'must be after the start date'
   error_in_validation_youtube_link: 'must be only youtube link'
-  default_lat_and_lon: '53.4250605,27.6971358'
   time:
     formats:
       default: "%d %b %H-%M"

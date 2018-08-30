@@ -19,7 +19,6 @@ gem 'aws-sdk-s3'
 gem 'file_validators'
 gem 'mini_magick'
 
-gem 'geocoder'
 gem 'sendgrid-ruby'
 gem 'video_info'
 

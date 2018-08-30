@@ -11,19 +11,12 @@ class Event < ApplicationRecord
 
   validates :title, :place_title, :description, :start_at, :end_at, presence: true
   validates :title, length: { in: 6..20 }
-  validates :place_title, length: { maximum: 30 }
-  validates :coordinate, length: { maximum: 150 }
+  validates :place_title, length: { maximum: 50 }
+  validates :address, length: { maximum: 150 }
   validates :description, length: { minimum: 30 }
   validates_with StartEndTimeValidator
 
   def self.upcoming
     where(['end_at > ?', Time.now]).first
-  end
-
-  geocoded_by :coordinate
-  after_validation :geocode_coordinate, if: :coordinate_changed?
-
-  def geocode_coordinate
-    self.latitude, self.longitude = Geocoder.coordinates(coordinate)
   end
 end
