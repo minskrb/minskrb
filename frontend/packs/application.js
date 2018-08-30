@@ -8,7 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 // main page
-
 import "init";
 import "components/announcement/announcement";
 import "components/event/event";
@@ -42,6 +41,9 @@ import "components/show-nav/show-nav";
 // simple pages
 import "components/friends-page/friends-page";
 import "components/about-page/about-page";
+
+// log in page
+import "components/devise/devise";
 
 // slider
 import "components/events/events";
