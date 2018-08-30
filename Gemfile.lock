@@ -324,7 +324,7 @@ GEM
     selectize-rails (0.12.5)
     selenium-webdriver (2.53.4)
       childprocess (~> 0.5)
-      rubyzip (~> 1.2)
+      rubyzip (~> 1.0)
       websocket (~> 1.0)
     sendgrid-ruby (5.2.0)
       ruby_http_client (~> 3.2)

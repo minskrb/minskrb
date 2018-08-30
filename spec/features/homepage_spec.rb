@@ -17,6 +17,10 @@ RSpec.describe 'Homepage:', type: :system do
         expect(page).to have_content event.place_title
       end
 
+      it 'sees the event place address' do
+        expect(page).to have_content event.address
+      end
+
       it 'sees the event date' do
         expect(page).to have_content I18n.l(event.start_at)
       end

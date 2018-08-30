@@ -1,15 +1,14 @@
 <section class="where">
   <div class="where-item">
     <div class="where-item__info">
-      <h3>When & Where_</h>
+      <h3>When & Where_</h3>
       <span><%= l(@event.start_at) %></span>
       <span><%= @event.place_title %></span>
-      <span>Oktyabrskaya str. 16a, Minsk</span>
+      <span><%= @event.address %></span>
       <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     </div>
     <div class="where-item__map">
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDc4bU611NyBZ_2PJxohPbLTpQWk7UUiaw&q=Грушевская 124">
-      </iframe>
+      <iframe src=<%= google_map(@event.address) %>></iframe>
     </div>
   </div>
 </section>

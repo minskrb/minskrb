@@ -14,6 +14,10 @@ RSpec.describe Event, type: :model do
       it { should validate_length_of(:place_title).is_at_most(30) }
     end
 
+    describe '#address' do
+      it { should validate_length_of(:address).is_at_most(150) }
+    end
+
     describe '#description' do
       it { should validate_presence_of(:description) }
 
