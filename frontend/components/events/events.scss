@@ -5,7 +5,6 @@
   align-items: center;
 
   &-content {
-    display: block;
     margin-left: 16.18%;
     padding-top: 50px;
     padding-bottom: 56px;
@@ -129,7 +128,7 @@
       &__up,
       &__down {
         font-family: serif;
-        color: #50E3C2;
+        color: #50e3c2;
         font-size: 70px;
         transform: rotate(90deg);
         cursor: pointer;
@@ -226,8 +225,8 @@
       &__links {
         margin-left: 10.52%;
         margin-top: 40px;
-        }
       }
+    }
 
     &-selector {
       display: none;
