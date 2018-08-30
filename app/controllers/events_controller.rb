@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
     @event = Event.upcoming
-    @schedule = @event&.event_items&.schedule
+    @schedule = EventItem.where(event: @event)
   end
 end

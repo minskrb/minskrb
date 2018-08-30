@@ -1,16 +1,12 @@
 <section class="schedule">
   <div class="schedule-item">
   <h3>Schedule_</h3>
-    <% if @schedule.blank? %>
-      <div class="schedule-item__event"><p>No event items</p></div>
-    <% else %>
-      <% @schedule.each do |item| %>
-        <div class="schedule-item__event">
-          <p><%= l(item.start_at, format: :short) %></p>
-          <p><%= item.title %></p>
-          <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>
-        </div>
-      <% end %>
+    <% @schedule.each do |item| %>
+      <div class="schedule-item__event">
+        <p><%= l(item.start_at, format: :short) %></p>
+        <p><%= item.title %></p>
+        <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>
+      </div>
     <% end %>
   </div>
 </section>
