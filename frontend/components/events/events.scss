@@ -1,0 +1,235 @@
+.events {
+  margin-top: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &-content {
+    margin-left: 16.18%;
+    padding-top: 50px;
+    padding-bottom: 56px;
+    width: 65.28%;
+    background-color: #242424;
+    color: #fff;
+
+    &__link {
+      display: inline-block;
+      margin: 0;
+      margin-left: -41px;
+      font-size: 60px;
+      line-height: 89px;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: rgba(80, 227, 194, 0.2);
+      }
+    }
+
+    &__date {
+      margin: 0;
+      margin-top: 5px;
+      margin-left: -41px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__shedule {
+      margin-top: 47px;
+      margin-left: 5.56%;
+
+      .item {
+        display: flex;
+        align-items: baseline;
+        margin-top: 10px;
+        color: #fff;
+
+        p {
+          margin: 0;
+          margin-left: 5px;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 19px;
+
+          b {
+            font-size: 18px;
+            line-height: 24px;
+            font-family: "Roboto", serif;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__links {
+      display: flex;
+      margin-left: 5.56%;
+      margin-top: 50px;
+
+      a {
+        color: #fff;
+        transition: opacity 0.5s;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        .icon {
+          width: 20px;
+          height: 18px;
+        }
+
+        &:last-child {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.26%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+
+    &__index {
+      cursor: pointer;
+      transition: color 0.5s;
+
+      &:hover {
+        color: #50e3c2;
+      }
+    }
+  }
+
+  &-selector {
+    width: 20%;
+    margin-left: 13.02%;
+    margin-top: 68px;
+    display: flex;
+    align-items: center;
+
+    &-scroll {
+      height: 134px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+
+      &__up,
+      &__down {
+        font-family: serif;
+        color: #50e3c2;
+        font-size: 70px;
+        transform: rotate(90deg);
+        cursor: pointer;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &__scroll {
+        font-family: "Roboto", serif;
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+
+    &-count {
+      margin-left: 40px;
+      color: #fff;
+      font-size: 70px;
+      line-height: 103px;
+    }
+  }
+}
+
+@media screen and(max-width: 950px) {
+  .events {
+    margin-top: 55px;
+
+    &-content {
+      width: 72.66%;
+      margin-left: 13.02%;
+
+      &__link {
+        font-size: 50px;
+        line-height: 74px;
+      }
+
+      &__shedule {
+        margin-left: 10.91%;
+      }
+
+      & .item {
+        p {
+          width: 89.1%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .events {
+    margin-top: 20px;
+    flex-direction: column;
+
+    &-pagination {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-content {
+      width: 89.33%;
+      margin-left: 10.67%;
+      margin-top: 20px;
+
+      &__link,
+      &__date {
+        margin-left: -20px;
+      }
+
+      &__link {
+        font-size: 32px;
+        line-height: 48px;
+      }
+
+      &__shedule {
+        margin-left: 10.52%;
+        margin-top: 30px;
+      }
+
+      & .item {
+        p {
+          width: 76%;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      &__links {
+        margin-left: 10.52%;
+        margin-top: 40px;
+      }
+    }
+
+    &-selector {
+      display: none;
+    }
+  }
+}
