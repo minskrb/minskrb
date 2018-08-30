@@ -1,7 +1,7 @@
 <section class="schedule">
   <div class="schedule-item">
   <h3>Schedule_</h3>
-    <% @event.event_items.each do |item| %>
+    <% @schedule.each do |item| %>
       <div class="schedule-item__event">
         <p><%= l(item.start_at, format: :short) %></p>
         <p><%= item.title %></p>
