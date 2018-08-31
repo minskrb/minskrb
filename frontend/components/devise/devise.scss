@@ -57,6 +57,18 @@
   }
 }
 
+.alert {
+  &-error,
+  &-alert,
+  &-notice,
+  &-success {
+    font-size: 20px;
+    margin-left: 26.67%;
+    color: #50e3c2;
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .devise {
     margin-bottom: 92px;
@@ -69,6 +81,18 @@
     form {
       margin: auto;
       width: 79.04%;
+    }
+  }
+
+  .alert {
+    &-error,
+    &-alert,
+    &-notice,
+    &-success {
+      margin: auto;
+      font-size: 20px;
+      margin-left: 15.67%;
+      color: #50e3c2;
     }
   }
 }
@@ -93,6 +117,17 @@
         font-size: 18px;
         line-height: 26px;
       }
+    }
+  }
+
+  .alert {
+    &-error,
+    &-alert,
+    &-notice,
+    &-success {
+      margin: 0;
+      font-size: 20px;
+      color: #50e3c2;
     }
   }
 }
