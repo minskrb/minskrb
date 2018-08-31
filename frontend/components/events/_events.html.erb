@@ -1,6 +1,15 @@
 <section class="events">
+  <div class="events-selector">
+    <div class="events-selector-scroll">
+      <div class="events-selector-scroll__up">&lt</div>
+      <div class="events-selector-scroll__scroll">Scroll</div>
+      <div class="events-selector-scroll__down">&gt</div>
+    </div>
+    <div class="events-selector-count">1</div>
+  </div>
 
   <div class="view-port">
+
     <div class="slider-wrapper">
       <% @events.each do |event| %>
         <div class="events-content">
@@ -26,14 +35,5 @@
         </div>
       <% end %>
     </div>
-  </div>
-
-  <div class="events-selector">
-    <div class="events-selector-scroll">
-      <div class="events-selector-scroll__up"><</div>
-      <div class="events-selector-scroll__scroll">Scroll</div>
-      <div class="events-selector-scroll__down">></div>
-    </div>
-    <div class="events-selector-count">1</div>
   </div>
 </section>

@@ -32,12 +32,18 @@ $(document).ready(() => {
     slideNow = slideCount;
   }
 
+  function slideNowShow() {
+    $(".events-selector-count").text(`${slideNow}`);
+  }
+
   $(".events-selector-scroll__up").on("click", () => {
     slideUp();
+    slideNowShow();
   });
 
   $(".events-selector-scroll__down").on("click", () => {
     slideDown();
+    slideNowShow();
   });
 
   $(".events-selector-scroll__up").dblclick(() => {
