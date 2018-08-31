@@ -3,7 +3,13 @@ module MapsHelper
 
   def google_map(address)
     uri = URI(GOOGLE_API_URL)
-    uri.query = URI.encode_www_form(key: Rails.application.credentials.google[:maps_api_key], q: address)
+    uri.query = URI.encode_www_form(key: Rails.application.credentials.google[:maps_api_key], q: address(address))
     uri
+  end
+
+  private
+
+  def address(address)
+    address.blank? ? 'Belarus' : address
   end
 end
