@@ -1,0 +1,11 @@
+<div class="devise" id="devise">
+  <h1>Log in</h1>
+  <%= render 'layouts/messages' %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, placeholder: "Email *", autofocus: true, autocomplete: "email" %>
+    <%= f.password_field :password, placeholder: "Password *", autocomplete: "off" %>
+    <%= f.submit "Log in" %>
+  <% end %>
+</div>
+
+<%= render "devise/shared/links" %>

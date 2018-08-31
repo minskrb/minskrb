@@ -1,0 +1,133 @@
+.devise {
+  margin-bottom: 244px;
+
+  h1 {
+    color: #fff;
+    font-size: 4.4444vw;
+    line-height: 6.6vw;
+    margin-top: 105px;
+    margin-left: 13.75%;
+    margin-bottom: 40px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 34px;
+    margin-left: 26.67%;
+    width: 44.51%;
+
+    input[type=password],
+    input[type=email] {
+      font-family: "Space mono", monospace;
+      padding: 10px 26px 14px;
+      margin-bottom: 20px;
+      background-color: #242424;
+      border: 2px solid #222;
+      box-sizing: border-box;
+      line-height: 36px;
+      color: #c6f6eb;
+      font-size: 24px;
+      transition: border-color 2s;
+      outline: none;
+
+      &:hover {
+        border-color: #50e3c2;
+      }
+    }
+
+    input[type=submit] {
+      height: 60px;
+      margin-top: 25px;
+      font-family: "Space mono", monospace;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      color: #1d1d1d;
+      background-color: #50e3c2;
+      border: none;
+      transition: opacity 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.alert {
+  &-error,
+  &-alert,
+  &-notice,
+  &-success {
+    font-size: 20px;
+    margin-left: 26.67%;
+    color: #50e3c2;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .devise {
+    margin-bottom: 92px;
+
+    h1 {
+      margin-top: 100px;
+      margin-left: 6.25%;
+    }
+
+    form {
+      margin: auto;
+      width: 79.04%;
+    }
+  }
+
+  .alert {
+    &-error,
+    &-alert,
+    &-notice,
+    &-success {
+      margin: auto;
+      font-size: 20px;
+      margin-left: 15.67%;
+      color: #50e3c2;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .devise {
+    margin-bottom: 150px;
+
+    h1 {
+      margin-top: 80px;
+      font-size: 32px;
+      margin-left: none;
+    }
+
+    form {
+      margin: auto;
+      width: 89.33%;
+
+      input[type=password],
+      input[type=email],
+      input[type=submit] {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .alert {
+    &-error,
+    &-alert,
+    &-notice,
+    &-success {
+      margin: 0;
+      font-size: 20px;
+      color: #50e3c2;
+    }
+  }
+}
