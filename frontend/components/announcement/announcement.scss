@@ -38,10 +38,12 @@
     }
 
     &__organization {
-      margin-top: 38px;
-      font-size: 30px;
-      line-height: 35px;
-      font-family: "Roboto", serif;
+      span {
+        margin-top: 38px;
+        font-size: 30px;
+        line-height: 35px;
+        font-family: "Roboto", serif;
+      }
     }
 
     &__link {
@@ -50,6 +52,7 @@
       line-height: 29px;
       font-weight: bold;
       margin-left: 3.47%;
+      transition: opacity 0.3s ease;
 
       &:visited {
         color: #50e3c2;
@@ -109,8 +112,10 @@
 
       &__organization {
         margin-top: 23px;
-        font-size: 20px;
-        line-height: 24px;
+        span {
+          font-size: 20px;
+          line-height: 24px;
+        }
       }
 
       .btn {

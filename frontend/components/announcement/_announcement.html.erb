@@ -6,7 +6,8 @@
       Minsk.rb <%= @event.title %>
     </h3>
     <div class="announcement-item__organization">
-      <%= @event.place_title %> / <%= @event.address %>
+      <i class="fas fa-map-pin fa-2x"></i>
+      <span><%= @event.place_title %> / <%= @event.address %></span>
     </div>
     <%= link_to "register", "https://t.me/minskrbbot", class: "button btn", target: "_blank" %>
     <%= link_to "View details", "#event", class: "announcement-item__link" %>

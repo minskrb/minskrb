@@ -21,28 +21,28 @@
       line-height: 34px;
       font-family: "Roboto", serif;
     }
-
   }
 
   &-share {
     margin-top: 55px;
-    width: 42.7173%;
     display: flex;
+    align-items: baseline;
     font-size: 14px;
     line-height: 16px;
 
     &__title {
       font-family: "Roboto", serif;
+      margin-right: 20px;
     }
 
     &__link {
       margin: 0;
-      margin-left: 10px;
       padding: 0;
 
       a {
-        transition: opacity 0.5s;
+        margin-right: 15px;
         color: #50e3c2;
+        transition: opacity 0.3s ease;
 
         &:hover {
           opacity: 0.6;
@@ -60,11 +60,6 @@
 
     &-item {
       width: 83.07%;
-      margin-left: 10.42%;
-    }
-
-    &-share {
-      width: 61.59%;
     }
   }
 }
@@ -91,15 +86,15 @@
     &-share {
       margin-top: 20px;
       height: 60px;
-      width: 100%;
 
       &__link {
-        width: 66.13%;
-        margin-left: 15px;
+        width: 77.13%;
         display: flex;
-        justify-content: space-between;
-        align-items: space-between;
         flex-wrap: wrap;
+
+        a {
+          margin-top: 5px;
+        }
       }
     }
   }
