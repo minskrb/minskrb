@@ -6,7 +6,7 @@
 
   .view-port {
     overflow: hidden;
-    width: 68.08%;
+    width: 73.08%;
     margin-left: 13.4%;
     height: 546px;
 
@@ -131,6 +131,7 @@
     margin-top: 68px;
     display: flex;
     align-items: center;
+    user-select: none;
 
     &-scroll {
       height: 134px;

@@ -8,98 +8,31 @@
 
   <div class="view-port">
     <div class="slider-wrapper">
-
-      <div class="events-content">
-        <%= link_to "Minsk rb! Hip!", "#", class: "events-content__link"  %>
-        <div class="events-content__date">11 Sep 1997</div>
-        <div class="events-content__shedule">
-          <% 6.times do %>
-            <div class="item">
-              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
-            </div>
-          <% end %>
+      <% @events.each do |event| %>
+        <div class="events-content">
+          <%= link_to "Minsk.rb #{event.title}", event_speakers_path(event), class: "events-content__link"  %>
+          <div class="events-content__date"><%= l(event.start_at) %></div>
+          <div class="events-content__shedule">
+            <% event.event_items.each do |item| %>
+              <div class="item">
+                <p><b><%= item.title %></b> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
+              </div>
+            <% end %>
+          </div>
+          <div class="events-content__links">
+            <%= link_to event_photos_path(event) do %>
+              <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+              <span><%= event.images&.size %></span>
+            <% end %>
+            <%= link_to event_videos_path(event) do %>
+              <%= content_tag(:i, '', class: "icon fas fa-video") %>
+              <span><%= event.videos&.size %></span>
+            <% end %>
+          </div>
         </div>
-        <div class="events-content__links">
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-            <span>124</span>
-          <% end %>
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-video") %>
-            <span>4</span>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="events-content">
-        <%= link_to "Minsk rb! DEnis!", "#", class: "events-content__link"  %>
-        <div class="events-content__date">11 Sep 1997</div>
-        <div class="events-content__shedule">
-          <% 6.times do %>
-            <div class="item">
-              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="events-content__links">
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-            <span>124</span>
-          <% end %>
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-video") %>
-            <span>4</span>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="events-content">
-        <%= link_to "Minsk rb! Beer!", "#", class: "events-content__link"  %>
-        <div class="events-content__date">11 Sep 1997</div>
-        <div class="events-content__shedule">
-          <% 6.times do %>
-            <div class="item">
-              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="events-content__links">
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-            <span>124</span>
-          <% end %>
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-video") %>
-            <span>4</span>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="events-content">
-        <%= link_to "Minsk rb! Beer!", "#", class: "events-content__link"  %>
-        <div class="events-content__date">11 Sep 1997</div>
-        <div class="events-content__shedule">
-          <% 3.times do %>
-            <div class="item">
-              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="events-content__links">
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-            <span>124</span>
-          <% end %>
-          <%= link_to "#" do %>
-            <%= content_tag(:i, '', class: "icon fas fa-video") %>
-            <span>4</span>
-          <% end %>
-        </div>
-      </div>
-
+      <% end %>
     </div>
   </div>
-
 
   <div class="events-selector">
     <div class="events-selector-scroll">

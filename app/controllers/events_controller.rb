@@ -3,5 +3,7 @@ class EventsController < ApplicationController
     @event = Event.upcoming
   end
 
-  def show; end
+  def show
+    @events = Event.passed
+  end
 end
