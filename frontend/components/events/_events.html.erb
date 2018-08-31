@@ -2,33 +2,104 @@
 
   <div class="events-pagination">
     <% 10.times do |i|%>
-      <span class="events-pagination__index" onclick="currentSlide()"><%= i+1 %></span>
+      <span class="events-pagination__index" id="<%= i %>"><%= i+1 %></span>
     <% end %>
   </div>
 
-  <div class="events-content">
-    <%= link_to "Minsk rb! Beer Up!", "#", class: "events-content__link"  %>
-    <div class="events-content__date">11 Sep 1997</div>
-    <div class="events-content__shedule">
-      <% 6.times do %>
-        <div class="item">
-          <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+  <div class="view-port">
+    <div class="slider-wrapper">
+
+      <div class="events-content">
+        <%= link_to "Minsk rb! Hip!", "#", class: "events-content__link"  %>
+        <div class="events-content__date">11 Sep 1997</div>
+        <div class="events-content__shedule">
+          <% 6.times do %>
+            <div class="item">
+              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
+        <div class="events-content__links">
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+            <span>124</span>
+          <% end %>
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-video") %>
+            <span>4</span>
+          <% end %>
+        </div>
+      </div>
 
-    <div class="events-content__links">
-      <%= link_to "#" do %>
-        <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-        <span>124</span>
-      <% end %>
+      <div class="events-content">
+        <%= link_to "Minsk rb! DEnis!", "#", class: "events-content__link"  %>
+        <div class="events-content__date">11 Sep 1997</div>
+        <div class="events-content__shedule">
+          <% 6.times do %>
+            <div class="item">
+              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="events-content__links">
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+            <span>124</span>
+          <% end %>
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-video") %>
+            <span>4</span>
+          <% end %>
+        </div>
+      </div>
 
-      <%= link_to "#" do %>
-        <%= content_tag(:i, '', class: "icon fas fa-video") %>
-        <span>124</span>
-      <% end %>
+      <div class="events-content">
+        <%= link_to "Minsk rb! Beer!", "#", class: "events-content__link"  %>
+        <div class="events-content__date">11 Sep 1997</div>
+        <div class="events-content__shedule">
+          <% 6.times do %>
+            <div class="item">
+              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="events-content__links">
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+            <span>124</span>
+          <% end %>
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-video") %>
+            <span>4</span>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="events-content">
+        <%= link_to "Minsk rb! Beer!", "#", class: "events-content__link"  %>
+        <div class="events-content__date">11 Sep 1997</div>
+        <div class="events-content__shedule">
+          <% 3.times do %>
+            <div class="item">
+              <p><b>Anfi-IF Missing Pattern</b> &mdash; Sergey Sergyenko</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="events-content__links">
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-camera") %>
+            <span>124</span>
+          <% end %>
+          <%= link_to "#" do %>
+            <%= content_tag(:i, '', class: "icon fas fa-video") %>
+            <span>4</span>
+          <% end %>
+        </div>
+      </div>
+
     </div>
   </div>
+
 
   <div class="events-selector">
     <div class="events-selector-scroll">
@@ -36,6 +107,6 @@
       <div class="events-selector-scroll__scroll">Scroll</div>
       <div class="events-selector-scroll__down">></div>
     </div>
-    <div class="events-selector-count">15</div>
+    <div class="events-selector-count">1</div>
   </div>
 </section>

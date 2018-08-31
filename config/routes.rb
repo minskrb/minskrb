@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   match '/500', to: 'errors#internal_error', via: :all
   match '/422', to: 'errors#unacceptable', via: :all
 
+  get '/archive', to: 'events#show'
+
   root 'events#index'
   devise_for :admin_users
 
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   resources :friends, only: %i[index]
   resources :about, only: %i[index]
 
-  resources :events, only: %i[index show] do
+  resources :events, only: %i[index] do
     resources :speakers, only: %i[index], module: :events
     resources :photos, only: %i[index], module: :events
     resources :videos, only: %i[index], module: :events
