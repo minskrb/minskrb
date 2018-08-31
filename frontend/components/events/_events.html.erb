@@ -1,11 +1,5 @@
 <section class="events">
 
-  <div class="events-pagination">
-    <% 10.times do |i|%>
-      <span class="events-pagination__index" id="<%= i %>"><%= i+1 %></span>
-    <% end %>
-  </div>
-
   <div class="view-port">
     <div class="slider-wrapper">
       <% @events.each do |event| %>

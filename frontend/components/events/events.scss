@@ -72,10 +72,6 @@
               }
             }
           }
-
-          &:last-child {
-            margin-bottom: 30px;
-          }
         }
 
         &__links {
@@ -101,26 +97,6 @@
             }
           }
         }
-      }
-    }
-  }
-
-  &-pagination {
-    width: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3.26%;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #fff;
-
-    &__index {
-      cursor: pointer;
-      transition: color 0.5s;
-
-      &:hover {
-        color: #50e3c2;
       }
     }
   }
@@ -169,7 +145,6 @@
     }
   }
 }
-
 
 // @media screen and(max-width: 950px) {
 //   .events {
