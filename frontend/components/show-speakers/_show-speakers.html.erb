@@ -3,12 +3,12 @@
     <%= yield %>
 
     <div class="show-speakers-content__speakers">
-      <% @speakers.each do |speaker| %>
+      <% @talks.each do |talk| %>
         <div class="card">
-          <%= image_tag asset_pack_path('components/show-speakers/static/man.png'), class: "card__photo" %>
+          <%= image_tag photo(talk.image), class: "card-photo" %>
           <div class="card-description">
-            <p class="card-description__name"><%= speaker.speaker_name %></p>
-            <h3 class="card-description__topic"><%= speaker.title %></h3>
+            <p class="card-description__name"><%= talk.speaker_name %></p>
+            <h3 class="card-description__topic"><%= talk.title %></h3>
           </div>
         </div>
       <% end %>

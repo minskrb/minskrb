@@ -3,8 +3,8 @@
     <%= yield %>
 
     <div class="show-photos-content__photos">
-      <% 10.times do %>
-        <%= image_tag asset_pack_path('components/show-photos/static/man.png') %>
+      <% @event_images.each do |image| %>
+        <%= image_tag photo(image) %>
       <% end %>
     </div>
   </div>

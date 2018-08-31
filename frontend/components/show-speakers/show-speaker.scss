@@ -11,7 +11,7 @@
         display: flex;
         margin-bottom: 40px;
 
-        &__photo {
+        &-photo {
           width: 140px;
           height: 140px;
         }
@@ -54,7 +54,7 @@
         .card {
           margin-bottom: 30px;
 
-          &__photo {
+          &-photo {
             width: 140px;
             height: 140px;
           }
@@ -88,7 +88,7 @@
         .card {
           margin-bottom: 30px;
 
-          &__photo {
+          &-photo {
             width: 80px;
             height: 80px;
           }

@@ -2,8 +2,8 @@
   <h3>Media Partners_</h3>
   <div class="media-item">
     <div class="media-item__partners">
-      <% @event.event_media_partners.each do |media| %>
-        <%= link_to ">> #{media.title}", "#{media.link}", target: "_blank" %>
+      <% @event.event_media_partners.each do |partner| %>
+        <%= link_to ">> #{partner.title}", partner.link, target: "_blank" %>
       <% end %>
     </div>
     <%= link_to "Become a media partner >>", "#contact_us", class: "to_contact" %>

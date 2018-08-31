@@ -1,11 +1,11 @@
 <section class="schedule">
   <div class="schedule-item">
   <h3>Schedule_</h3>
-    <% @schedule.each do |item| %>
+    <% @schedule.each do |talk| %>
       <div class="schedule-item__event">
-        <p><%= l(item.start_at, format: :short) %></p>
-        <p><%= item.title %></p>
-        <p><%= "-#{item.speaker_name}" unless item.speaker_name.blank? %></p>
+        <p><%= l(talk.start_at, format: :short) %></p>
+        <p><%= talk.title %></p>
+        <p><%= "-#{talk.speaker_name}" unless talk.speaker_name.blank? %></p>
       </div>
     <% end %>
   </div>
