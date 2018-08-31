@@ -2,7 +2,7 @@ module Events
   class SpeakersController < ApplicationController
     def index
       @event = Event.find(params[:event_id])
-      @speakers = @event.event_items.talks
+      @talks =EventItem.where(event: @event).talks
     end
   end
 end

@@ -1,10 +1,10 @@
 <section class="speakers">
   <h3>Speakers_</h3>
   <div class="speakers-item">
-    <% @speakers.each do |speaker| %>
+    <% @talks.each do |talk| %>
       <div class="speakers-item__card">
-        <%= image_tag photo(speaker.image) %>
-        <p><%= speaker.speaker_name %></p>
+        <%= image_tag photo(talk.image) %>
+        <p><%= talk.speaker_name %></p>
       </div>
     <% end %>
   </div>
