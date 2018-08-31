@@ -19,4 +19,8 @@ class Event < ApplicationRecord
   def self.upcoming
     where(['end_at > ?', Time.now]).first
   end
+
+  def self.passed
+    where(['end_at < ?', Time.now])
+  end
 end
