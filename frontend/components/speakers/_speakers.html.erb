@@ -3,7 +3,7 @@
   <div class="speakers-item">
     <% @speakers.each do |speaker| %>
       <div class="speakers-item__card">
-        <%= image_tag speaker.image.photo %>
+        <%= image_tag photo(speaker.image) %>
         <p><%= speaker.speaker_name %></p>
       </div>
     <% end %>
