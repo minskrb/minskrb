@@ -6,6 +6,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @events = Event.passed
+    @events = Event.passed.includes(:event_items, :videos, :images)
   end
 end

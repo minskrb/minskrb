@@ -18,18 +18,18 @@
           <div class="events-content__shedule">
             <% event.event_items.each do |item| %>
               <div class="item">
-                <p><b><%= item.title %></b> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
+                <p><strong><%= item.title %></strong> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
               </div>
             <% end %>
           </div>
           <div class="events-content__links">
             <%= link_to event_photos_path(event) do %>
               <%= content_tag(:i, '', class: "icon fas fa-camera") %>
-              <span><%= event.images&.size %></span>
+              <span><%= event.images.size %></span>
             <% end %>
             <%= link_to event_videos_path(event) do %>
               <%= content_tag(:i, '', class: "icon fas fa-video") %>
-              <span><%= event.videos&.size %></span>
+              <span><%= event.videos.size %></span>
             <% end %>
           </div>
         </div>
