@@ -18,7 +18,7 @@
           <div class="events-content__shedule">
             <% event.event_items.each do |item| %>
               <div class="item">
-                <p><strong><%= item.title %></strong> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
+                <p><b><%= item.title %></b> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
               </div>
             <% end %>
           </div>
