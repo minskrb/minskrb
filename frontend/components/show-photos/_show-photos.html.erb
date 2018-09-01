@@ -4,8 +4,12 @@
 
     <div class="show-photos-content__photos">
       <% @event_images.each do |image| %>
-        <%= image_tag photo(image) %>
+        <%= image_tag photo(image), id: "id_#{image.id}" %>
       <% end %>
     </div>
+  </div>
+  <div id="imageModal" class="show-photos-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img">
   </div>
 </section>
