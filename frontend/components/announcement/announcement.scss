@@ -30,20 +30,34 @@
         content: attr(alt);
         color: #2c4943;
         position: absolute;
-        font-size: 8vw;
-        bottom: 24%;
-        left: 0;
+        font-size: 7.33vw;
+        bottom: 24px;
+        left: -16px;
         z-index: -1;
       }
     }
 
     &__organization {
-      span {
         margin-top: 38px;
-        font-size: 30px;
-        line-height: 35px;
-        font-family: "Roboto", serif;
-      }
+
+        span {
+          font-family: "Roboto", serif;
+            &:nth-child(2) {
+              font-size: 30px;
+              line-height: 35px;
+            }
+
+            &:nth-child(3) {
+              margin-left: 15px;
+              margin-right: 15px;
+            }
+
+            &:last-child,
+            &:nth-child(3) {
+              font-size: 22px;
+              line-height: 25px;
+            }
+        }
     }
 
     &__link {
@@ -78,6 +92,11 @@
 
       &__title {
         margin-top: 50px;
+
+        &::after {
+          bottom: 20px;
+        }
+
       }
 
       &__organization {
@@ -108,6 +127,11 @@
 
       &__title {
         margin-top: 33px;
+
+        &::after {
+          bottom: 15px;
+          left: -10px;
+        }
       }
 
       &__organization {

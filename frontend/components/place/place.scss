@@ -10,27 +10,28 @@
 
     &__info {
       h3 {
-        font-size: 35px;
-        line-height: 56px;
+        font-size: 36px;
+        line-height: 53px;
       }
 
       span {
         display: block;
 
-        &:nth-child(1) {
+        &:nth-child(2) {
           margin-top: 37px;
           font-size: 25px;
           line-height: 37px;
           font-weight: bold;
         }
 
-        &:nth-child(2) {
+        &:nth-child(3) {
           margin-top: 12px;
           font-size: 30px;
           line-height: 45px;
         }
 
-        &:nth-child(3) {
+        &:nth-child(4) {
+          font-family: "Roboto", serif;
           margin-top: 18px;
           font-size: 17px;
           line-height: 20px;
@@ -53,14 +54,15 @@
 
 @media screen and (max-width: 1200px) {
   .where {
+    margin-top: 70px;
     &-item {
       width: 86.98%;
       margin-left: 10.42%;
 
       &__info {
         span {
-          &:nth-child(1),
-          &:nth-child(2) {
+          &:nth-child(2),
+          &:nth-child(3) {
             margin-left: 10%;
           }
         }
@@ -75,6 +77,8 @@
 
 @media screen and (max-width: 550px) {
   .where {
+    margin-top: 40px;
+
     &-item {
       width: 84%;
       margin-left: 10.42%;
@@ -87,25 +91,25 @@
         }
 
         span {
-          &:nth-child(1) {
+          &:nth-child(2) {
             margin-top: 24px;
             font-size: 18px;
             line-height: 26px;
           }
 
-          &:nth-child(2) {
+          &:nth-child(3) {
             margin-top: 10px;
             font-size: 24px;
             line-height: 36px;
           }
 
-          &:nth-child(3) {
+          &:nth-child(4) {
             margin-top: 10px;
             font-size: 16px;
           }
 
-          &:nth-child(1),
-          &:nth-child(2) {
+          &:nth-child(2),
+          &:nth-child(3) {
             margin-left: 0;
           }
         }
@@ -113,6 +117,7 @@
 
       &__map {
         margin-left: 0;
+        margin-top: 30px;
         width: 100%;
 
         iframe {
