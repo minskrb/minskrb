@@ -1,6 +1,5 @@
 .speakers {
   margin-top: 63px;
-  margin-bottom: 100px;
 
   h3 {
     color: #fff;
@@ -14,9 +13,9 @@
     margin-left: 18.13%;
     margin-top: 48px;
     width: 63.89%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 40px;
 
     &__card {
       width: 200px;
@@ -42,8 +41,9 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .speakers {
+    margin-top: 30px;
 
     h3 {
       margin-left: 10.42%;
@@ -51,8 +51,9 @@
 
     &-item {
       margin: 0 auto;
+      margin-top: 48px;
       width: 57.29%;
-      flex-wrap: wrap;
+      grid-template-columns: auto auto;
     }
   }
 }
@@ -68,6 +69,7 @@
       margin-top: 37px;
       margin-left: 10.67%;
       width: 82.67%;
+      grid-column-gap: 10px;
 
       &__card {
         width: 150px;

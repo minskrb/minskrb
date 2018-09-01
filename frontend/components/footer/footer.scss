@@ -1,12 +1,14 @@
 .footer {
   width: 94.44%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 100px;
 
   .footer-item {
     position: relative;
 
     h1 {
+      margin: 0;
       color: #fff;
       font-size: 7.84722vw;
       line-height: 8.3333vw;
@@ -33,7 +35,7 @@
     transform: rotate(90deg);
     position: absolute;
     top: 0;
-    right: -8%;
+    right: -85px;
   }
 }
 

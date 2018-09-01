@@ -5,5 +5,7 @@ class EventsController < ApplicationController
     @talks = @schedule.talks
   end
 
-  def show; end
+  def show
+    @events = Event.passed.includes(:event_items, :videos, :images)
+  end
 end
