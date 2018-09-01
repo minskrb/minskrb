@@ -48,6 +48,7 @@
         cursor: pointer;
       }
     }
+
     .modal-content {
       width: 80%;
       max-width: 700px;
@@ -57,10 +58,10 @@
   }
 }
 
-  @keyframes zoom {
-      from {transform:scale(0)}
-      to {transform:scale(1)}
-  }
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
 
 
 @media screen and (max-width: 900px) {
@@ -109,7 +110,7 @@
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 }
