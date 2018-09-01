@@ -34,7 +34,7 @@ RSpec.describe 'Homepage:', type: :system do
       end
 
       it 'sees the social network sharing section of that Event' do
-        expect(page).to have_content "Share +\nFacebook Twitter LinkedIn Vkontakte"
+        expect(page).to have_content "Share +\nFacebook Twitter LinkedIn VK"
       end
     end
 
