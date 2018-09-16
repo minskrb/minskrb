@@ -4,6 +4,10 @@ services:
     image: postgres
     volumes:
       - ./data:/var/lib/postgresql/data
+  redis:
+    image: redis:latest
+    volumes:
+      - ./data:/var/data/redis
   app:
     build:
       context: .
@@ -14,3 +18,16 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - redis
+  sidekiq:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    command: bundle exec sidekiq
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - .:/minskrb_app
+    env_file:
+      - .env
