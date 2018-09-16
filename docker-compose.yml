@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    volumes:
+      - .:/minskrb_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
