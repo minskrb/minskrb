@@ -14,8 +14,6 @@ services:
       dockerfile: ./docker/app/Dockerfile
     volumes:
       - .:/minskrb_app
-    ports:
-      - "3000:3000"
     depends_on:
       - db
       - redis
@@ -31,3 +29,11 @@ services:
       - .:/minskrb_app
     env_file:
       - .env
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    depends_on:
+      - app
+    ports:
+      - 8080:80
