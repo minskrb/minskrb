@@ -14,8 +14,8 @@ services:
 
   app:
     build:
-      context: .
-      dockerfile: ./docker/app/Dockerfile
+      context: ./docker/app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
@@ -27,8 +27,8 @@ services:
 
   sidekiq:
     build:
-      context: .
-      dockerfile: ./docker/app/Dockerfile
+      context: ./docker/app
+      dockerfile: Dockerfile
     command: bundle exec sidekiq
     depends_on:
       - db
@@ -41,8 +41,8 @@ services:
 
   nginx:
     build:
-      context: .
-      dockerfile: ./docker/nginx/Dockerfile
+      context: ./docker/nginx
+      dockerfile: Dockerfile
     volumes:
       - ./tmp/sockets:/sockets
     depends_on:
