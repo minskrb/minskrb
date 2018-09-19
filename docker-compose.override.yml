@@ -30,3 +30,14 @@ services:
       args:
         BRANCH: "feature/dockerize"
         REPOSITORY: https://github.com/minskrb/minskrb.git
+
+  nginx:
+    environment:
+      - TZ=Europe/Minsk
+      - LETSENCRYPT=false
+      - LE_EMAIL=zhenia.zhak@gmail.com
+      - LE_FQDN=localhost
+
+    build:
+        args:
+          env: dev
