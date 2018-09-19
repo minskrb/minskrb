@@ -9,7 +9,7 @@ WORKDIR $RAILS_ROOT
 RUN mkdir log
 
 COPY public public/
-COPY docker/web/app.conf /tmp/docker_example.nginx
+COPY docker/web/conf/nginx.conf /tmp/docker_example.nginx
 
 RUN envsubst '$RAILS_ROOT' < /tmp/docker_example.nginx > /etc/nginx/conf.d/default.conf
 

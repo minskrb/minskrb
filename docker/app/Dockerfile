@@ -1,11 +1,7 @@
 FROM rubyroidlabs/ruby:2-5-1-node-stretch
 
-ARG BRANCH
+ARG BRANCH=master
 ARG REPOSITORY
-
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-
-RUN apt-get update -qq && apt-get install -y yarn
 
 ENV RAILS_ROOT /app
 

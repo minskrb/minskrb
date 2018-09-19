@@ -16,5 +16,17 @@ services:
 
     build:
       args:
-        BRANCH: master
+        BRANCH: "feature/dockerize"
+        REPOSITORY: https://github.com/minskrb/minskrb.git
+
+  sidekiq:
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: minskrb_development
+
+    build:
+      args:
+        BRANCH: "feature/dockerize"
         REPOSITORY: https://github.com/minskrb/minskrb.git
