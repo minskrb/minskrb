@@ -2,6 +2,7 @@ FROM rubyroidlabs/ruby:2-5-1-node-stretch
 
 ARG BRANCH=master
 ARG REPOSITORY
+ARG RAILS_ENV
 
 ENV RAILS_ROOT /app
 
