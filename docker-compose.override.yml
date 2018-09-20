@@ -1,18 +1,18 @@
 version: '3'
 
 services:
-  db:
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: minskrb_development
+  #db:
+  #  environment:
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
 
   app:
-    environment:
-      POSTGRES_HOST: db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: minskrb_development
+  #  environment:
+  #    POSTGRES_HOST: db
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
 
     build:
       args:
@@ -20,11 +20,11 @@ services:
         REPOSITORY: https://github.com/minskrb/minskrb.git
 
   sidekiq:
-    environment:
-      POSTGRES_HOST: db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: minskrb_development
+  #  environment:
+  #    POSTGRES_HOST: db
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
 
     build:
       args:
@@ -34,10 +34,10 @@ services:
   nginx:
     environment:
       - TZ=Europe/Minsk
-      - LETSENCRYPT=false
+      - LETSENCRYPT=true
       - LE_EMAIL=zhenia.zhak@gmail.com
-      - LE_FQDN=localhost
+      - LE_FQDN=minskrb.community
 
     build:
         args:
-          env: dev
+          env: prod
