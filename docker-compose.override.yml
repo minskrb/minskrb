@@ -24,7 +24,9 @@ services:
         REPOSITORY: https://github.com/minskrb/minskrb.git
 
   sidekiq:
-  #  environment:
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=master_key
   #    POSTGRES_HOST: db
   #    POSTGRES_USER: postgres
   #    POSTGRES_PASSWORD: example
@@ -32,6 +34,8 @@ services:
 
     build:
       args:
+        RAILS_ENV: production
+        RAILS_MASTER_KEY: "master_key"
         BRANCH: "feature/dockerize"
         REPOSITORY: https://github.com/minskrb/minskrb.git
 
