@@ -20,7 +20,7 @@ services:
       args:
         RAILS_ENV: production
         RAILS_MASTER_KEY: "master_key"
-        BRANCH: "feature/dockerize"
+        BRANCH: "feature/dockerize-test"
         REPOSITORY: https://github.com/minskrb/minskrb.git
 
   sidekiq:
@@ -32,16 +32,18 @@ services:
 
     build:
       args:
-        BRANCH: "feature/dockerize"
+        RAILS_ENV: production
+        RAILS_MASTER_KEY: "master_key"
+        BRANCH: "feature/dockerize-test"
         REPOSITORY: https://github.com/minskrb/minskrb.git
 
-  nginx:
-    environment:
-      - TZ=Europe/Minsk
-      - LETSENCRYPT=true
-      - LE_EMAIL=zhenia.zhak@gmail.com
-      - LE_FQDN=minskrb.community
+  # nginx:
+  #   environment:
+  #     - TZ=Europe/Minsk
+  #     - LETSENCRYPT=true
+  #     - LE_EMAIL=zhenia.zhak@gmail.com
+  #     - LE_FQDN=minskrb.community
 
-    build:
-        args:
-          env: prod
+  #   build:
+  #       args:
+  #         env: prod

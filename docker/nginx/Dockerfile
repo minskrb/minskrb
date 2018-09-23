@@ -1,21 +1,18 @@
-FROM nginx:stable-alpine
+FROM nginx
 
-ARG env
+RUN apt-get update -qq && apt-get -y install apache2-utils
 
-# Copy nginx congig
-ADD conf/nginx.conf /etc/nginx/nginx.conf
+ENV RAILS_ROOT /var/www/minskrb
 
-# Copy service config
-ADD etc/$env.nginx.conf /etc/nginx/conf.d/service.conf
+WORKDIR $RAILS_ROOT
 
-ADD script/entrypoint.sh /entrypoint.sh
-ADD script/le.sh /le.sh
+RUN mkdir log
 
-RUN \
-  rm /etc/nginx/conf.d/default.conf && \
-  chmod +x /entrypoint.sh && \
-  chmod +x /le.sh && \
-  apk add  --update certbot tzdata openssl && \
-  rm -rf /var/cache/apk/*
+COPY public public/
+COPY docker/nginx/nginx.conf /tmp/docker_example.nginx
 
-CMD ["/entrypoint.sh"]
+RUN envsubst '$RAILS_ROOT' < /tmp/docker_example.nginx > /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
