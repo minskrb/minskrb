@@ -15,6 +15,4 @@ RUN bundle install
 
 RUN RAILS_ENV=production NODE_ENV=production rails assets:precompile
 
-EXPOSE 3000
-
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

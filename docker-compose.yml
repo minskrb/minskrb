@@ -16,11 +16,12 @@ services:
     build:
       context: ./docker/app
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
     depends_on:
       - db
       - redis
+    volumes:
+      - sockets:/app/tmp/sockets
+      - public:/app/public
     restart: on-failure
 
   sidekiq:
@@ -31,8 +32,6 @@ services:
     depends_on:
       - db
       - redis
-    volumes:
-      - ./public:/app/public
     restart: on-failure
     env_file:
       - .env
@@ -41,10 +40,15 @@ services:
     build:
       context: ./docker/nginx
       dockerfile: Dockerfile
-    volumes:
-      - ./tmp/sockets:/sockets
-    depends_on:
-      - app
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - sockets:/etc/nginx/sockets
+      - public:/etc/nginx/public
+    depends_on:
+      - app
+
+volumes:
+  public:
+  sockets:
