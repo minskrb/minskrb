@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   match '/500', to: 'errors#internal_error', via: :all
   match '/422', to: 'errors#unacceptable', via: :all
 
-  get '/events/all', to: 'events#show'
+  get '/events/all',       to: 'events#show'
+  get '/terms-of-service', to: 'statics#tos'
 
   root 'events#index'
   devise_for :admin_users
