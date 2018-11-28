@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    volumes:
+      - ./data:/var/data/redis
+
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - sockets:/app/tmp/sockets
+      - public:/app/public
+    restart: on-failure
+
+  sidekiq:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    command: bundle exec sidekiq
+    depends_on:
+      - db
+      - redis
+    restart: on-failure
+    env_file:
+      - .env
+
+  nginx:
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - sockets:/etc/nginx/sockets
+      - public:/etc/nginx/public
+    depends_on:
+      - app
+
+volumes:
+  public:
+  sockets:

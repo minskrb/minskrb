@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  #db:
+  #  environment:
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
+
+  app:
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=master_key
+  #    POSTGRES_HOST: db
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
+
+    build:
+      args:
+        RAILS_ENV: production
+        RAILS_MASTER_KEY: "master_key"
+        BRANCH: "feature/dockerize"
+        REPOSITORY: https://github.com/minskrb/minskrb.git
+
+  sidekiq:
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=master_key
+  #    POSTGRES_HOST: db
+  #    POSTGRES_USER: postgres
+  #    POSTGRES_PASSWORD: example
+  #    POSTGRES_DB: minskrb_development
+
+    build:
+      args:
+        RAILS_ENV: production
+        RAILS_MASTER_KEY: "master_key"
+        BRANCH: "feature/dockerize"
+        REPOSITORY: https://github.com/minskrb/minskrb.git
+
+  nginx:
+    environment:
+      - TZ=Europe/Minsk
+      - LETSENCRYPT=true
+      - LE_EMAIL=zhenia.zhak@gmail.com
+      - LE_FQDN=minskrb.community
+
+    build:
+        args:
+          env: prod

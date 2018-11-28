@@ -141,6 +141,7 @@ GEM
     cocoon (1.2.11)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
@@ -275,6 +276,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (4.0.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -335,6 +337,10 @@ GEM
     shoulda-context (1.2.2)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    sidekiq (5.2.1)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     sinatra (2.0.3)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -413,12 +419,14 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails-controller-testing
+  redis (~> 4.0, >= 4.0.2)
   rspec-rails (~> 3.7)
   rubocop
   selenium-webdriver (= 2.53.4)
   sendgrid-ruby
   shoulda (~> 3.5)
   shoulda-matchers (~> 3.0)
+  sidekiq (~> 5.2, >= 5.2.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
