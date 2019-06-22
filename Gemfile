@@ -13,9 +13,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
-gem 'administrate'
-gem 'administrate-field-nested_has_many'
-gem 'administrate-field-enum'
+gem 'administrate', '>= 0.10.0'
+gem 'administrate-field-nested_has_many', '>= 1.0.0'
+gem 'administrate-field-enum', '>= 0.0.7'
 
 gem 'aws-sdk-s3'
 gem 'file_validators'
