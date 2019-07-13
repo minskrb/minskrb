@@ -19,7 +19,7 @@ gem 'administrate-field-enum'
 
 gem 'aws-sdk-s3'
 gem 'file_validators'
-gem 'mini_magick'
+gem 'mini_magick', '>= 4.9.4'
 
 gem 'sendgrid-ruby'
 gem 'video_info'
