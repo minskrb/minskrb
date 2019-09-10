@@ -11,7 +11,7 @@ gem 'sidekiq', '~> 5.2', '>= 5.2.1'
 gem 'webpacker', '~> 3.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 
 gem 'administrate'
 gem 'administrate-field-nested_has_many'
