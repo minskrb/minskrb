@@ -15,7 +15,7 @@ gem 'devise'
 
 gem 'administrate'
 gem 'administrate-field-nested_has_many'
-gem 'administrate-field-enum'
+gem 'administrate-field-enum', '>= 0.0.7'
 
 gem 'aws-sdk-s3'
 gem 'file_validators'
@@ -52,7 +52,7 @@ group :test do
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver', '2.53.4'
-  gem 'poltergeist'
+  gem 'poltergeist', '>= 1.18.1'
   gem 'chromedriver-helper'
 end
 
