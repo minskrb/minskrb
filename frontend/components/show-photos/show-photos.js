@@ -11,12 +11,12 @@ $(document).ready(() => {
 
     const span = document.getElementsByClassName("close")[0];
 
-    img.onclick = function() {
+    img.onclick = function () {
       modal.style.display = "flex";
       modalImg.src = this.src;
     };
 
-    span.onclick = function() {
+    span.onclick = function () {
       modal.style.display = "none";
     };
   });
