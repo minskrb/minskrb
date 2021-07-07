@@ -50,9 +50,9 @@ group :test do
   gem 'shoulda-matchers', '~> 3.0'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara', '>= 3.4.2', '< 4.0'
   gem 'selenium-webdriver', '2.53.4'
-  gem 'poltergeist'
+  gem 'poltergeist', '>= 1.18.1'
   gem 'chromedriver-helper'
 end
 
