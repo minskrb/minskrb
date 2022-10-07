@@ -3,14 +3,17 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "5.2.2",
     "autoprefixer": "^9.1.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "normalize.css": "^7.0.0",
-    "rails-ujs": "^5.2.1"
+    "rails-ujs": "^5.2.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
-    "lint-staged": "$(yarn bin)/lint-staged"
+    "lint-staged": "$(yarn bin)/lint-staged",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "lint-staged": {
     "config/webpack/**/*.js": [
@@ -47,5 +50,6 @@
     "stylelint": "^8.1.1",
     "stylelint-config-standard": "^17.0.0",
     "webpack-dev-server": "2.11.2"
-  }
+  },
+  "snyk": true
 }
