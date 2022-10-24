@@ -8,7 +8,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'redis', '~> 4.0', '>= 4.0.2'
 gem 'sidekiq', '~> 5.2', '>= 5.2.1'
-gem 'webpacker', '~> 3.5'
+gem 'webpacker', '~> 3.5', '>= 3.5.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
@@ -25,14 +25,14 @@ gem 'sendgrid-ruby'
 gem 'video_info'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'rails-controller-testing'
   gem 'rubocop'
   gem 'pry'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.6.2'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -48,9 +48,9 @@ end
 group :test do
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 3.0'
-  gem 'factory_bot_rails', '~> 4.0'
+  gem 'factory_bot_rails', '~> 4.10', '>= 4.10.0'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara', '>= 3.4.2', '< 4.0'
   gem 'selenium-webdriver', '2.53.4'
   gem 'poltergeist'
   gem 'chromedriver-helper'
