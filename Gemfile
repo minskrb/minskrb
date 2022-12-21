@@ -13,7 +13,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 
-gem 'administrate'
+gem 'administrate', '>= 0.12.0'
 gem 'administrate-field-nested_has_many'
 gem 'administrate-field-enum'
 
