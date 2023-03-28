@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'redis', '~> 4.0', '>= 4.0.2'
@@ -15,7 +15,7 @@ gem 'devise'
 
 gem 'administrate'
 gem 'administrate-field-nested_has_many'
-gem 'administrate-field-enum'
+gem 'administrate-field-enum', '>= 0.0.9'
 
 gem 'aws-sdk-s3'
 gem 'file_validators'
