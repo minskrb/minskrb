@@ -16,9 +16,9 @@
           <%= link_to "Minsk.rb #{event.title}", event_speakers_path(event), class: "events-content__link"  %>
           <div class="events-content__date"><%= l(event.start_at) %></div>
           <div class="events-content__shedule">
-            <% event.event_items.each do |item| %>
+            <% limit_speakers(event).each do |item| %>
               <div class="item">
-                <p><b><%= item.title %></b> &mdash; <%= item.speaker_name unless item.speaker_name.blank? %></p>
+                <p><b><%= item.title %></b> &mdash; <%= item.speaker_name %></p>
               </div>
             <% end %>
           </div>
