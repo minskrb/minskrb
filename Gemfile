@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.6', '>= 5.6.7'
 gem 'redis', '~> 4.0', '>= 4.0.2'
-gem 'sidekiq', '~> 5.2', '>= 5.2.1'
+gem 'sidekiq', '~> 7.1', '>= 7.1.3'
 gem 'webpacker', '~> 3.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
